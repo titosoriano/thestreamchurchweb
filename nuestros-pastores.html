@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Nuestros Pastores | Mission Baptist Church - The Stream</title>
     <meta name="description" content="Conoce a los Pastores Erick y Karen Sandoval de Mission Baptist Church The Stream. Líderes dedicados a servir con amor y fe.">
     
@@ -34,6 +34,9 @@
             overflow-x: hidden;
             width: 100%;
             min-width: 320px;
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+            padding-bottom: env(safe-area-inset-bottom);
         }
         
         html, body {
@@ -61,19 +64,24 @@
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            padding: 0 16px;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
             box-sizing: border-box;
         }
         
         @media (min-width: 640px) {
             .container {
-                padding: 0 24px;
+                padding-left: max(24px, env(safe-area-inset-left));
+                padding-right: max(24px, env(safe-area-inset-right));
             }
         }
         
         @media (min-width: 1024px) {
             .container {
-                padding: 0 32px;
+                padding-left: max(32px, env(safe-area-inset-left));
+                padding-right: max(32px, env(safe-area-inset-right));
             }
         }
         
@@ -242,6 +250,7 @@
             right: 0;
             z-index: 50;
             transition: all 0.3s ease;
+            padding-top: env(safe-area-inset-top);
         }
         
         .nav.scrolled {
@@ -347,9 +356,9 @@
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 64px;
-            left: 16px;
-            right: 16px;
+            top: calc(64px + env(safe-area-inset-top));
+            left: max(16px, env(safe-area-inset-left));
+            right: max(16px, env(safe-area-inset-right));
             z-index: 40;
             animation: fade-in 0.3s ease;
         }
@@ -359,8 +368,10 @@
         }
         
         .mobile-menu a {
-            display: block;
-            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+            min-height: 48px;
             color: rgba(255, 255, 255, 0.8);
             border-radius: 12px;
             transition: all 0.3s ease;
@@ -469,15 +480,76 @@
             top: 120px;
         }
         
+        section {
+            width: 100%;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
         .pastor-images-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 24px;
         }
         
+        @media (max-width: 640px) {
+            .section-padding {
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
+            .pastor-image-container {
+                position: relative;
+                top: 0;
+            }
+            .pastor-intro {
+                padding: 20px 16px;
+                font-size: 1.1rem;
+                margin-bottom: 32px;
+            }
+            .pastor-section {
+                margin-bottom: 32px;
+            }
+            .pastor-section h3 {
+                font-size: 1.5rem;
+            }
+            .section-header .section-title {
+                font-size: 2rem;
+            }
+            .footer-grid {
+                gap: 32px;
+                margin-bottom: 40px;
+            }
+        }
+        
         @media (max-width: 480px) {
             .pastor-images-grid {
                 grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .container {
+                padding-left: max(12px, env(safe-area-inset-left));
+                padding-right: max(12px, env(safe-area-inset-right));
+            }
+            .section-header .section-title {
+                font-size: 1.75rem;
+            }
+            .pastor-intro {
+                padding: 16px 12px;
+                font-size: 1rem;
+            }
+            .mobile-menu-btn {
+                min-width: 44px;
+                min-height: 44px;
+            }
+            .footer-social a {
+                min-width: 44px;
+                min-height: 44px;
+            }
+        }
+        
+        @media (max-width: 380px) {
+            .section-header .section-title {
+                font-size: 1.5rem;
             }
         }
         
