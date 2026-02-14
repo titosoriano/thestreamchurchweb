@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Pastores | Mission Baptist Church - The Stream</title>
+    <meta name="description" content="Conoce a los Pastores Erick y Karen Sandoval de Mission Baptist Church The Stream. Líderes dedicados a servir con amor y fe.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+            min-width: 320px;
+        }
+        
+        html, body {
+            max-width: 100%;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* ===== UTILITY CLASSES ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 16px;
+            box-sizing: border-box;
+        }
+        
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+        }
+        
+        .section-padding {
+            padding: 60px 0;
+            width: 100%;
+        }
+        
+        @media (min-width: 640px) {
+            .section-padding {
+                padding: 80px 0;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 112px 0;
+            }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        }
+        
+        .glass-card-strong {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #93c5fd, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            font-weight: 500;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #0f172a;
+            font-weight: 500;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.4);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.6);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 32px;
+            background: transparent;
+            color: #fbbf24;
+            font-weight: 500;
+            border-radius: 9999px;
+            border: 2px solid rgba(251, 191, 36, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(251, 191, 36, 0.1);
+            border-color: #fbbf24;
+            transform: translateY(-2px);
+        }
+
+        .text-shadow {
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        
+        /* Scroll Reveal */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #3b82f6, #fbbf24);
+            border-radius: 4px;
+        }
+        
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        
+        .nav.scrolled {
+            background: rgba(2, 6, 23, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-content {
+                height: 80px;
+            }
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #f59e0b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-logo:hover .nav-logo-icon {
+            transform: scale(1.1);
+        }
+        
+        .nav-links {
+            display: none;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+        }
+        
+        .nav-link {
+            padding: 8px 16px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-cta {
+            display: none;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-cta {
+                display: block;
+            }
+        }
+        
+        .nav-cta a {
+            padding: 8px 24px;
+            font-size: 14px;
+        }
+        
+        .mobile-menu-btn {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        @media (min-width: 768px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 64px;
+            left: 16px;
+            right: 16px;
+            z-index: 40;
+            animation: fade-in 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%);
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 16px;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: #fbbf24;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* ===== PASTOR PROFILE SECTION ===== */
+        .pastor-profile {
+            position: relative;
+        }
+        
+        .pastor-profile::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, #020617, rgba(15, 23, 42, 0.95), #020617);
+            pointer-events: none;
+        }
+        
+        .pastor-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+        
+        @media (min-width: 1024px) {
+            .pastor-grid {
+                grid-template-columns: 400px 1fr;
+                gap: 64px;
+            }
+        }
+        
+        .pastor-image-container {
+            position: sticky;
+            top: 120px;
+        }
+        
+        .pastor-images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        
+        @media (max-width: 480px) {
+            .pastor-images-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .pastor-card-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pastor-card-info {
+            padding: 16px 0;
+            text-align: center;
+        }
+        
+        .pastor-card-info .pastor-badge {
+            margin-bottom: 8px;
+        }
+        
+        .pastor-image-wrapper {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .pastor-image-wrapper img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+        
+        .pastor-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(251, 191, 36, 0.2);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 9999px;
+            color: #fbbf24;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            white-space: nowrap;
+        }
+        
+        .pastor-card-info h3 {
+            font-weight: 700;
+            color: white;
+        }
+        
+        .pastor-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .pastor-intro {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 48px;
+            padding: 32px;
+            border-left: 4px solid #fbbf24;
+        }
+        
+        .pastor-section {
+            margin-bottom: 48px;
+        }
+        
+        .pastor-section h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .pastor-section h3 i {
+            color: #fbbf24;
+        }
+
+        .section-header {
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-header .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: #fbbf24;
+        }
+
+        .section-header .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 640px) {
+            .section-header .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        .video-embed-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .video-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .pastor-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .pastor-goals {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+        
+        .pastor-goals li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px;
+            margin-bottom: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .pastor-goals li i {
+            color: #fbbf24;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        
+        .pastor-goals li span {
+            font-weight: 600;
+            color: white;
+        }
+        
+        .pastor-initiatives {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .initiative-card {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .initiative-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(251, 191, 36, 0.3);
+            transform: translateY(-4px);
+        }
+        
+        .initiative-card i {
+            color: #fbbf24;
+            margin-bottom: 12px;
+        }
+        
+        .initiative-card h4 {
+            font-size: 1.125rem;
+            margin-bottom: 8px;
+        }
+        
+        .initiative-card p {
+            font-size: 0.875rem;
+            margin: 0;
+        }
+        
+        /* Family Info */
+        .family-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+        }
+        
+        .family-info i {
+            color: #60a5fa;
+        }
+        
+        .family-info p {
+            margin: 0;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(251, 191, 36, 0.1) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 48px;
+            margin-top: 64px;
+            text-align: center;
+        }
+        
+        .cta-section h3 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        
+        .cta-section p {
+            max-width: 600px;
+            margin: 0 auto 32px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            position: relative;
+            padding: 80px 0 40px;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+                gap: 64px;
+            }
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .footer-brand p.gradient-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .footer-brand p.tagline {
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+        
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .footer-contact a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+        
+        .footer-contact a:hover {
+            color: white;
+        }
+        
+        .footer-contact a i {
+            color: #fbbf24;
+        }
+        
+        .footer-contact a .external {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-contact a:hover .external {
+            opacity: 1;
+        }
+        
+        .footer h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-pastores {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .footer-pastores p:first-child {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .footer-pastores p:last-child {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            transform: translateY(-4px);
+        }
+        
+        .footer-social a.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        
+        .footer-social a.facebook {
+            background: #1877f2;
+        }
+        
+        .footer-social a.youtube {
+            background: #ff0000;
+        }
+        
+        .footer-map {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-map:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(251, 191, 36, 0.3);
+            color: white;
+        }
+        
+        .footer-map i {
+            color: #fbbf24;
+        }
+        
+        .footer-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            margin-bottom: 32px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+        }
+        
+        .footer-bottom p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav scrolled" id="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    <div class="nav-logo-icon">
+                        <i data-lucide="church" style="width: 20px; height: 20px; color: white;"></i>
+                    </div>
+                    <span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.25rem;">The Stream</span>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="index.html#servicios" class="nav-link">Servicios</a>
+                    <a href="index.html#eventos" class="nav-link">Eventos</a>
+                    <a href="index.html#pastores" class="nav-link">Pastores</a>
+                    <a href="index.html#contacto" class="nav-link">Contacto</a>
+                </div>
+                
+                <div class="nav-cta">
+                    <a href="https://www.facebook.com/TheStreamChurchNJ/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 8px 24px; font-size: 14px;">Conectar</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i data-lucide="menu" style="width: 20px; height: 20px; color: white;" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="glass-card" style="padding: 8px;">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#servicios">Servicios</a>
+            <a href="index.html#eventos">Eventos</a>
+            <a href="index.html#pastores">Pastores</a>
+            <a href="index.html#contacto">Contacto</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge glass-card animate-fade-in-up">
+                <i data-lucide="heart" style="width: 16px; height: 16px;"></i>
+                <span>Nuestro Liderazgo</span>
+            </div>
+            <h1 class="hero-title text-shadow animate-fade-in-up delay-200">
+                Conoce a Nuestros <span class="gradient-text">Pastores</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-300">
+                Líderes dedicados a servir con amor, creatividad y compasión
+            </p>
+        </div>
+    </section>
+
+    <!-- Pastor Profile Section -->
+    <section class="section-padding pastor-profile">
+        <div class="container">
+            <div class="pastor-grid">
+                <!-- Left Column - Images -->
+                <div class="pastor-image-container scroll-reveal">
+                    <div class="pastor-images-grid">
+                        <!-- Erick -->
+                        <div class="pastor-card-item">
+                            <div class="pastor-image-wrapper">
+                                <img src="/img/ericksandoval.png" alt="Pastor Erick Sandoval">
+                            </div>
+                            <div class="pastor-card-info">
+                                <div class="pastor-badge">
+                                    <i data-lucide="church" style="width: 14px; height: 14px;"></i>
+                                    Pastor Local
+                                </div>
+                                <h3 style="font-size: 1.25rem; margin: 0;">Erick Sandoval</h3>
+                            </div>
+                        </div>
+                        
+                        <!-- Karen -->
+                        <div class="pastor-card-item">
+                            <div class="pastor-image-wrapper">
+                                <img src="/img/karen.png" alt="Pastora Karen Sandoval">
+                            </div>
+                            <div class="pastor-card-info">
+                                <div class="pastor-badge">
+                                    <i data-lucide="church" style="width: 14px; height: 14px;"></i>
+                                    Pastora Local
+                                </div>
+                                <h3 style="font-size: 1.25rem; margin: 0;">Karen Sandoval</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Church Info -->
+                    <div class="family-info scroll-reveal" style="transition-delay: 200ms; margin-top: 24px;">
+                        <i data-lucide="heart" style="width: 24px; height: 24px;"></i>
+                        <p>Misión Iglesia Bautista: El Arroyo - Líderes dedicados a servir con amor</p>
+                    </div>
+                    
+                    <!-- Family Info -->
+                    <div class="family-info scroll-reveal" style="transition-delay: 300ms;">
+                        <i data-lucide="users" style="width: 24px; height: 24px;"></i>
+                        <p>Casados desde 2015, bendecidos con dos hermosos hijos: James y Amy</p>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Content -->
+                <div class="pastor-content">
+                    <!-- Intro -->
+                    <div class="glass-card pastor-intro scroll-reveal">
+                        Los pastores Erick y Karen Sandoval son los líderes dedicados e inspiradores de Misión Iglesia Bautista: El Arroyo. Sus antecedentes y experiencias únicos han dado forma a su enfoque del ministerio, combinando creatividad, amor y compasión para servir a la comunidad.
+                    </div>
+                    
+                    <!-- Legacy Section -->
+                    <div class="pastor-section scroll-reveal">
+                        <h3>
+                            <i data-lucide="book-open" style="width: 28px; height: 28px;"></i>
+                            Un Rico Legado Familiar en el Ministerio
+                        </h3>
+                        <p>
+                            El viaje del pastor Erick comenzó en El Salvador, donde se desempeñó como músico en la iglesia de su abuelo. El pastor Santos Sandoval Sr., el fundador de La Misión Iglesia Bautista, tuvo una profunda influencia en el joven Erick.
+                        </p>
+                        <p>
+                            A la edad de 11 años, Erick se mudó a Nueva Jersey y comenzó a servir en la iglesia de sus padres como líder juvenil y músico cuando tenía 15 años. Se graduó de Somerville High School y obtuvo una Licenciatura en Ciencias en Finanzas de la Universidad de Kean en 2014.
+                        </p>
+                        <p>
+                            En 2019, el pastor Erick y su padre fundaron Misión Iglesia Bautista: El Arroyo, la iglesia número 12 y más reciente en la Misión. Ese mismo año, el pastor Erick recibió su título en Educación Seminaria en El Salvador, convirtiéndose en un pastor acreditado y líder de Misión Iglesia Bautista: El Arroyo.
+                        </p>
+                    </div>
+                    
+                    <!-- Role Section -->
+                    <div class="pastor-section scroll-reveal">
+                        <h3>
+                            <i data-lucide="layers" style="width: 28px; height: 28px;"></i>
+                            Un Papel Multifacético en la Iglesia
+                        </h3>
+                        <p>
+                            El pastor Erick usa muchos sombreros dentro de la iglesia. No solo dirige a la congregación como pastor, sino que también se desempeña como Director del Grupo de Alabanza del Arroyo, llevando la adoración a nuevos niveles de excelencia y pasión.
+                        </p>
+                    </div>
+                    
+                    <!-- Ministry Focus Section -->
+                    <div class="pastor-section scroll-reveal">
+                        <h3>
+                            <i data-lucide="compass" style="width: 28px; height: 28px;"></i>
+                            Un Enfoque Creativo y Compasivo del Ministerio
+                        </h3>
+                        <p>
+                            El enfoque del pastor Erick al ministerio se centra en enseñar la Palabra de Dios y guiar a la iglesia con amor y compasión. Sus tres objetivos ministeriales más importantes son:
+                        </p>
+                        
+                        <ul class="pastor-goals">
+                            <li>
+                                <i data-lucide="target" style="width: 20px; height: 20px;"></i>
+                                <div>
+                                    <span>Ganar almas para Jesús</span>
+                                    <p style="margin: 4px 0 0; font-size: 0.9rem;">Llevando el mensaje de salvación a cada persona</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i data-lucide="hand-heart" style="width: 20px; height: 20px;"></i>
+                                <div>
+                                    <span>Servir a la comunidad</span>
+                                    <p style="margin: 4px 0 0; font-size: 0.9rem;">Extendiendo una mano de ayuda a quienes más lo necesitan</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i data-lucide="music-2" style="width: 20px; height: 20px;"></i>
+                                <div>
+                                    <span>Adorar a Dios en todo</span>
+                                    <p style="margin: 4px 0 0; font-size: 0.9rem;">Honrando a Dios con nuestras vidas y talentos</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Community Impact Section -->
+                    <div class="pastor-section scroll-reveal">
+                        <h3>
+                            <i data-lucide="globe" style="width: 28px; height: 28px;"></i>
+                            Impacto en la Comunidad
+                        </h3>
+                        <p>
+                            Bajo su liderazgo, la iglesia se ha involucrado profundamente en la comunidad. El pastor Erick y Karen han encabezado numerosas iniciativas que han tocado miles de vidas.
+                        </p>
+                        
+                        <div class="pastor-initiatives">
+                            <div class="initiative-card">
+                                <i data-lucide="heart-handshake" style="width: 32px; height: 32px;"></i>
+                                <h4>Fundación Grace</h4>
+                                <p>Apoyando a familias necesitadas en nuestra comunidad</p>
+                            </div>
+                            <div class="initiative-card">
+                                <i data-lucide="plane" style="width: 32px; height: 32px;"></i>
+                                <h4>Trabajo Misionero Internacional</h4>
+                                <p>Llevando esperanza alrededor del mundo</p>
+                            </div>
+                            <div class="initiative-card">
+                                <i data-lucide="users-2" style="width: 32px; height: 32px;"></i>
+                                <h4>Eventos Públicos</h4>
+                                <p>Bendiciendo a la comunidad con eventos especiales</p>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-top: 24px;">
+                            Su creatividad y dedicación al servicio han tenido un impacto duradero en la vida de muchos. Para obtener más información sobre el trabajo inspirador del pastor Erick y Karen Sandoval, visite el sitio web de Misión Iglesia Bautista: El Arroyo.
+                        </p>
+                    </div>
+                    
+                    <!-- CTA Section -->
+                    <div class="cta-section scroll-reveal">
+                        <h3>Únase a Nosotros</h3>
+                        <p>
+                            Únase al pastor Erick y Karen Sandoval en Mission Baptist Church: The Stream, donde el amor, la creatividad y la compasión están en el corazón de su ministerio. Sea parte de una comunidad que busca ganar almas para Jesús, servir a la comunidad y adorar a Dios en todo lo que hacen.
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="index.html#servicios" class="btn-primary">
+                                <i data-lucide="calendar" style="width: 20px; height: 20px;"></i>
+                                Ver Servicios
+                            </a>
+                            <a href="index.html#contacto" class="btn-outline">
+                                <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pastores Generales Section -->
+    <section class="section-padding pastor-profile" style="background: linear-gradient(to bottom, #020617, #0f172a);">
+        <div class="container">
+            <div class="section-header scroll-reveal" style="text-align: center; margin-bottom: 64px;">
+                <div class="glass-card section-badge" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; margin-bottom: 24px; font-size: 14px; color: #fbbf24;">
+                    <i data-lucide="crown" style="width: 20px; height: 20px;"></i>
+                    <span>Liderazgo General</span>
+                </div>
+                <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 16px;">Pastores <span class="gradient-text">Generales</span></h2>
+                <p style="color: rgba(255,255,255,0.7); font-size: 1.125rem;">Pioneros de la Misión Iglesia Bautista</p>
+            </div>
+
+            <div class="pastor-grid" style="grid-template-columns: 1fr; gap: 64px;">
+                <!-- Images Section -->
+                <div class="pastor-images-grid" style="max-width: 800px; margin: 0 auto;">
+                    <!-- Santos -->
+                    <div class="pastor-card-item scroll-reveal">
+                        <div class="pastor-image-wrapper">
+                            <img src="/img/pastorsantos.png" alt="Pastor General Santos Sandoval">
+                        </div>
+                        <div class="pastor-card-info">
+                            <div class="pastor-badge" style="background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.3); color: #60a5fa;">
+                                <i data-lucide="crown" style="width: 14px; height: 14px;"></i>
+                                Pastor General
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Santos Sandoval</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Mary -->
+                    <div class="pastor-card-item scroll-reveal" style="transition-delay: 100ms;">
+                        <div class="pastor-image-wrapper">
+                            <img src="/img/pastoramary.png" alt="Pastora General Mary Sandoval">
+                        </div>
+                        <div class="pastor-card-info">
+                            <div class="pastor-badge" style="background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.3); color: #60a5fa;">
+                                <i data-lucide="crown" style="width: 14px; height: 14px;"></i>
+                                Pastora General
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Mary Sandoval</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Section -->
+                <div class="pastor-content" style="max-width: 900px; margin: 0 auto;">
+                    <!-- Intro -->
+                    <div class="glass-card pastor-intro scroll-reveal" style="border-left-color: #60a5fa;">
+                        Los pastores Santos Sandoval y Mary Sandoval son líderes espirituales devotos, dedicados a servir a su comunidad y guiar a otros en su jornada de fe. Nacidos y criados en el pueblo de Chalatenango, El Salvador, crecieron con fuertes valores cristianos que moldearon su carácter e influyeron en su decisión de seguir una carrera en el ministerio.
+                    </div>
+                    
+                    <!-- Early Years Section -->
+                    <div class="pastor-section scroll-reveal">
+                        <h3>
+                            <i data-lucide="baby" style="width: 28px; height: 28px; color: #60a5fa;"></i>
+                            Primeros Años
+                        </h3>
+                        <p>
+                            Desde muy joven, el pastor Santos sintió una profunda conexión con Dios y un llamado a ayudar a los necesitados. Criado en Chalatenango, El Salvador, los valores cristianos fueron parte fundamental de su educación y formación, preparándolo para el gran llamado que Dios tenía para su vida.
+                        </p>
+                    </div>
+                    
+                    <!-- Reputation Section -->
+                    <div class="pastor-section scroll-reveal">
+                        <h3>
+                            <i data-lucide="star" style="width: 28px; height: 28px; color: #60a5fa;"></i>
+                            Reputación y Crecimiento
+                        </h3>
+                        <p>
+                            A lo largo de los años, la reputación del pastor Santos y Mary por su naturaleza compasiva, sermones edificantes y conexiones profundas con el Espíritu Santo continuó creciendo. Reconocida por su compromiso inquebrantable con la palabra de Dios y el bienestar de los demás, la congregación lo eligió por unanimidad como su pastor general.
+                        </p>
+                    </div>
+                    
+                    <!-- Leadership Section -->
+                    <div class="pastor-section scroll-reveal">
+                        <h3>
+                            <i data-lucide="church" style="width: 28px; height: 28px; color: #60a5fa;"></i>
+                            Liderazgo en Misión Iglesia Bautista
+                        </h3>
+                        <p>
+                            Después de la desafortunada muerte del fundador de Mission Baptist Church, el pastor Santos se convirtió en el pastor general de la misión en 2007 y las iglesias han florecido tanto espiritual como numéricamente bajo su liderazgo.
+                        </p>
+                        <p>
+                            Implementaron programas innovadores que involucraron a miembros de todas las edades y orígenes mientras mantenían los valores tradicionales que tenían un significado significativo para la comunidad. Su estilo dinámico de predicación cautivó a los oyentes de diversos ámbitos de la vida, inspirándolos a profundizar su relación con Dios y vivir su fe de manera práctica.
+                        </p>
+                    </div>
+                    
+                    <!-- Podcast Section -->
+                    <div class="pastor-section scroll-reveal" style="margin-top: 64px;">
+                        <h3>
+                            <i data-lucide="headphones" style="width: 28px; height: 28px; color: #ef4444;"></i>
+                            Historia de Vida de Los pastores Sandoval- The Stream Podcast
+                        </h3>
+                        <p>
+                            Descubra más sobre la increíble historia de los pastores Santos y Mary Sandoval a través de este podcast especial que narra su jornada de fe, desafíos y victorias en el ministerio.
+                        </p>
+                        
+                        <div class="glass-card" style="margin-top: 32px; padding: 24px;">
+                            <div class="video-embed-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/videoseries?list=PLObYftRLReXG0slrsSSFBIKYq3NUU-cHX" 
+                                    title="Historia de Vida - Santos y Mary Sandoval" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: linear-gradient(to bottom, #020617, #0f172a);">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Church Info -->
+                <div class="footer-brand scroll-reveal">
+                    <h3>Mission Baptist Church</h3>
+                    <p class="gradient-text">The Stream</p>
+                    <p class="tagline">"Un Lugar de Gracia"</p>
+                    
+                    <div class="footer-contact">
+                        <a href="https://www.google.com/maps?sll=40.636694,-74.505232&q=11+Technology+Drive+North+Warren,+NJ,+07059,+United+States&z=12" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+                            <span>11 Technology Drive North, Warren NJ 07059</span>
+                            <i data-lucide="external-link" class="external" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="tel:9089386852">
+                            <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
+                            <span>(908) 938-6852</span>
+                        </a>
+                        <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.7);">
+                            <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+                            <span>info@thestreamchurch.org</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pastors -->
+                <div class="scroll-reveal">
+                    <h4>Nuestros Pastores</h4>
+                    <div class="footer-pastores">
+                        <div>
+                            <p>Pastores Local</p>
+                            <p>Erick Y Karen Sandoval</p>
+                        </div>
+                        <div>
+                            <p>Pastores General</p>
+                            <p>Santos Y Mary Sandoval</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social -->
+                <div class="scroll-reveal">
+                    <h4>Síguenos</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/thestreamchurch/" target="_blank" rel="noopener noreferrer" class="instagram" title="Instagram">
+                            <i data-lucide="instagram" style="width: 20px; height: 20px; color: white;"></i>
+                        </a>
+                        <a href="https://www.facebook.com/TheStreamChurchNJ/" target="_blank" rel="noopener noreferrer" class="facebook" title="Facebook">
+                            <i data-lucide="facebook" style="width: 20px; height: 20px; color: white;"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCIFR8v6PMjHfYO1MyUnMaCQ" target="_blank" rel="noopener noreferrer" class="youtube" title="YouTube">
+                            <i data-lucide="youtube" style="width: 20px; height: 20px; color: white;"></i>
+                        </a>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/xv3umbvJt5U7nfwH8" target="_blank" rel="noopener noreferrer" class="footer-map">
+                        <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+                        Ver en Google Maps
+                        <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom scroll-reveal">
+                <p>Mission Baptist Church Inc is a 501(c)(3) organization, with an IRS ruling year of 2025, and donations are tax-deductible.</p>
+                <p>Este website es Mantenido por el ministerio de Media de Misión Iglesia Bautista El Arroyo, New Jersey (The Stream Church)</p>
+                <p>&copy; <span id="year"></span> Mission Baptist Church: The Stream. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        let isMenuOpen = false;
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('active', isMenuOpen);
+            menuIcon.setAttribute('data-lucide', isMenuOpen ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+        
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('active');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+        
+        // Scroll reveal observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
