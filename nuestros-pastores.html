@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros Pastores | Mission Baptist Church - The Stream</title>
     <meta name="description" content="Conoce a los Pastores Erick y Karen Sandoval de Mission Baptist Church The Stream. Líderes dedicados a servir con amor y fe.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -27,16 +27,13 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Raleway', sans-serif;
             background-color: #020617;
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
             width: 100%;
             min-width: 320px;
-            padding-left: env(safe-area-inset-left);
-            padding-right: env(safe-area-inset-right);
-            padding-bottom: env(safe-area-inset-bottom);
         }
         
         html, body {
@@ -44,7 +41,8 @@
         }
         
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
         }
         
         a {
@@ -64,24 +62,19 @@
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            padding-top: 0;
-            padding-bottom: 0;
-            padding-left: max(16px, env(safe-area-inset-left));
-            padding-right: max(16px, env(safe-area-inset-right));
+            padding: 0 16px;
             box-sizing: border-box;
         }
         
         @media (min-width: 640px) {
             .container {
-                padding-left: max(24px, env(safe-area-inset-left));
-                padding-right: max(24px, env(safe-area-inset-right));
+                padding: 0 24px;
             }
         }
         
         @media (min-width: 1024px) {
             .container {
-                padding-left: max(32px, env(safe-area-inset-left));
-                padding-right: max(32px, env(safe-area-inset-right));
+                padding: 0 32px;
             }
         }
         
@@ -129,14 +122,25 @@
         .btn-primary {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            padding: 12px 32px;
+            padding: 12px 24px;
             background: linear-gradient(135deg, #3b82f6, #2563eb);
             color: white;
             font-weight: 500;
             border-radius: 9999px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            width: 100%;
+            max-width: 280px;
+        }
+
+        @media (min-width: 480px) {
+            .btn-primary {
+                padding: 12px 32px;
+                width: auto;
+                max-width: none;
+            }
         }
         
         .btn-primary:hover {
@@ -147,14 +151,25 @@
         .btn-secondary {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            padding: 12px 32px;
+            padding: 12px 24px;
             background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: #0f172a;
             font-weight: 500;
             border-radius: 9999px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 20px rgba(251, 191, 36, 0.4);
+            width: 100%;
+            max-width: 280px;
+        }
+
+        @media (min-width: 480px) {
+            .btn-secondary {
+                padding: 12px 32px;
+                width: auto;
+                max-width: none;
+            }
         }
         
         .btn-secondary:hover {
@@ -165,14 +180,25 @@
         .btn-outline {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            padding: 12px 32px;
+            padding: 12px 24px;
             background: transparent;
             color: #fbbf24;
             font-weight: 500;
             border-radius: 9999px;
             border: 2px solid rgba(251, 191, 36, 0.5);
             transition: all 0.3s ease;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        @media (min-width: 480px) {
+            .btn-outline {
+                padding: 12px 32px;
+                width: auto;
+                max-width: none;
+            }
         }
 
         .btn-outline:hover {
@@ -201,7 +227,12 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
         .animate-fade-in-up {
             animation: fade-in-up 0.8s ease-out forwards;
             opacity: 0;
@@ -250,7 +281,6 @@
             right: 0;
             z-index: 50;
             transition: all 0.3s ease;
-            padding-top: env(safe-area-inset-top);
         }
         
         .nav.scrolled {
@@ -275,22 +305,16 @@
         .nav-logo {
             display: flex;
             align-items: center;
-            gap: 8px;
         }
         
-        .nav-logo-icon {
-            width: 40px;
+        .nav-logo img {
             height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #3b82f6, #f59e0b);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: auto;
             transition: transform 0.3s ease;
         }
         
-        .nav-logo:hover .nav-logo-icon {
-            transform: scale(1.1);
+        .nav-logo:hover img {
+            transform: scale(1.05);
         }
         
         .nav-links {
@@ -319,13 +343,66 @@
             background: rgba(255, 255, 255, 0.1);
         }
         
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(2, 6, 23, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 8px 0;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 10px 16px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Mobile Dropdown */
+        .mobile-dropdown-menu {
+            display: none;
+            flex-direction: column;
+        }
+        
+        .mobile-dropdown-menu.active {
+            display: flex;
+        }
+        
         .nav-cta {
             display: none;
         }
         
         @media (min-width: 768px) {
             .nav-cta {
-                display: block;
+                display: flex;
+                align-items: center;
+                gap: 8px;
             }
         }
         
@@ -356,9 +433,9 @@
         .mobile-menu {
             display: none;
             position: fixed;
-            top: calc(64px + env(safe-area-inset-top));
-            left: max(16px, env(safe-area-inset-left));
-            right: max(16px, env(safe-area-inset-right));
+            top: 64px;
+            left: 16px;
+            right: 16px;
             z-index: 40;
             animation: fade-in 0.3s ease;
         }
@@ -368,10 +445,8 @@
         }
         
         .mobile-menu a {
-            display: flex;
-            align-items: center;
-            padding: 14px 20px;
-            min-height: 48px;
+            display: block;
+            padding: 12px 16px;
             color: rgba(255, 255, 255, 0.8);
             border-radius: 12px;
             transition: all 0.3s ease;
@@ -384,32 +459,79 @@
         
         /* ===== HERO SECTION ===== */
         .hero {
-            min-height: 60vh;
+            min-height: 50vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%);
-            padding-top: 100px;
-            padding-bottom: 60px;
+            background: transparent;
+            padding-top: 90px;
+            padding-bottom: 40px;
+        }
+
+        @media (min-width: 640px) {
+            .hero {
+                min-height: 60vh;
+                padding-top: 100px;
+                padding-bottom: 60px;
+            }
         }
         
         .hero-bg {
+            position: absolute;
+            top: -20%;
+            left: 0;
+            width: 100%;
+            height: 140%;
+            background: linear-gradient(135deg, rgba(2, 6, 23, 0.7) 0%, rgba(15, 23, 42, 0.7) 50%, rgba(30, 27, 75, 0.7) 100%), url('img/pastores-bautismos.jpg') center 50%/cover no-repeat;
+            z-index: 0;
+            will-change: transform;
+        }
+
+        .hero-bg-overlay {
             position: absolute;
             inset: 0;
             background: 
                 radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
+            z-index: 1;
         }
         
+        /* ===== FLOATING PARTICLES ===== */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(96, 165, 250, 0.5);
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(96, 165, 250, 0.8);
+        }
+
+        .global-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .global-particles .particle {
+            opacity: 0.7;
+        }
+
         .hero-content {
             position: relative;
-            z-index: 10;
+            z-index: 2;
             text-align: center;
             max-width: 800px;
-            padding: 0 16px;
+            padding: 0 20px;
+            width: 100%;
         }
         
         .hero-badge {
@@ -477,79 +599,32 @@
         
         .pastor-image-container {
             position: sticky;
-            top: 120px;
+            top: 100px;
         }
         
-        section {
-            width: 100%;
-            position: relative;
-            overflow-x: hidden;
+        @media (max-width: 1023px) {
+            .pastor-image-container {
+                position: relative;
+                top: 0;
+            }
         }
         
         .pastor-images-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-        
-        @media (max-width: 640px) {
-            .section-padding {
-                padding-top: 48px;
-                padding-bottom: 48px;
-            }
-            .pastor-image-container {
-                position: relative;
-                top: 0;
-            }
-            .pastor-intro {
-                padding: 20px 16px;
-                font-size: 1.1rem;
-                margin-bottom: 32px;
-            }
-            .pastor-section {
-                margin-bottom: 32px;
-            }
-            .pastor-section h3 {
-                font-size: 1.5rem;
-            }
-            .section-header .section-title {
-                font-size: 2rem;
-            }
-            .footer-grid {
-                gap: 32px;
-                margin-bottom: 40px;
-            }
+            gap: 16px;
         }
         
         @media (max-width: 480px) {
             .pastor-images-grid {
                 grid-template-columns: 1fr;
-                gap: 16px;
-            }
-            .container {
-                padding-left: max(12px, env(safe-area-inset-left));
-                padding-right: max(12px, env(safe-area-inset-right));
-            }
-            .section-header .section-title {
-                font-size: 1.75rem;
-            }
-            .pastor-intro {
-                padding: 16px 12px;
-                font-size: 1rem;
-            }
-            .mobile-menu-btn {
-                min-width: 44px;
-                min-height: 44px;
-            }
-            .footer-social a {
-                min-width: 44px;
-                min-height: 44px;
+                gap: 20px;
             }
         }
-        
-        @media (max-width: 380px) {
-            .section-header .section-title {
-                font-size: 1.5rem;
+
+        @media (min-width: 640px) {
+            .pastor-images-grid {
+                gap: 24px;
             }
         }
         
@@ -559,8 +634,14 @@
         }
         
         .pastor-card-info {
-            padding: 16px 0;
+            padding: 12px 0;
             text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .pastor-card-info {
+                padding: 16px 0;
+            }
         }
         
         .pastor-card-info .pastor-badge {
@@ -609,25 +690,49 @@
         }
         
         .pastor-intro {
-            font-size: 1.25rem;
-            line-height: 1.8;
+            font-size: 1.125rem;
+            line-height: 1.7;
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 48px;
-            padding: 32px;
+            margin-bottom: 32px;
+            padding: 24px;
             border-left: 4px solid #fbbf24;
         }
         
+        @media (min-width: 640px) {
+            .pastor-intro {
+                font-size: 1.25rem;
+                line-height: 1.8;
+                margin-bottom: 48px;
+                padding: 32px;
+            }
+        }
+        
         .pastor-section {
-            margin-bottom: 48px;
+            margin-bottom: 32px;
+        }
+        
+        @media (min-width: 640px) {
+            .pastor-section {
+                margin-bottom: 48px;
+            }
         }
         
         .pastor-section h3 {
-            font-size: 1.75rem;
+            font-size: 1.375rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        @media (min-width: 640px) {
+            .pastor-section h3 {
+                font-size: 1.75rem;
+                margin-bottom: 20px;
+                gap: 12px;
+            }
         }
         
         .pastor-section h3 i {
@@ -650,13 +755,20 @@
         }
 
         .section-header .section-title {
-            font-size: 2.5rem;
+            font-size: 1.875rem;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             line-height: 1.2;
         }
 
         @media (min-width: 640px) {
+            .section-header .section-title {
+                font-size: 2.5rem;
+                margin-bottom: 16px;
+            }
+        }
+
+        @media (min-width: 1024px) {
             .section-header .section-title {
                 font-size: 3rem;
             }
@@ -683,8 +795,17 @@
         
         .pastor-section p {
             color: rgba(255, 255, 255, 0.8);
-            line-height: 1.8;
-            margin-bottom: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            font-size: 0.9375rem;
+        }
+        
+        @media (min-width: 640px) {
+            .pastor-section p {
+                line-height: 1.8;
+                margin-bottom: 16px;
+                font-size: 1rem;
+            }
         }
         
         .pastor-goals {
@@ -696,12 +817,20 @@
         .pastor-goals li {
             display: flex;
             align-items: flex-start;
-            gap: 16px;
-            padding: 16px;
-            margin-bottom: 12px;
+            gap: 12px;
+            padding: 12px;
+            margin-bottom: 10px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (min-width: 640px) {
+            .pastor-goals li {
+                gap: 16px;
+                padding: 16px;
+                margin-bottom: 12px;
+            }
         }
         
         .pastor-goals li i {
@@ -717,17 +846,31 @@
         
         .pastor-initiatives {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 16px;
-            margin-top: 24px;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        @media (min-width: 480px) {
+            .pastor-initiatives {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+                margin-top: 24px;
+            }
         }
         
         .initiative-card {
-            padding: 20px;
+            padding: 16px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             transition: all 0.3s ease;
+        }
+
+        @media (min-width: 640px) {
+            .initiative-card {
+                padding: 20px;
+            }
         }
         
         .initiative-card:hover {
@@ -754,13 +897,24 @@
         /* Family Info */
         .family-info {
             display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 24px;
-            margin: 32px 0;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            margin: 20px 0;
             background: rgba(59, 130, 246, 0.1);
             border: 1px solid rgba(59, 130, 246, 0.2);
             border-radius: 16px;
+            font-size: 0.9375rem;
+        }
+        
+        @media (min-width: 640px) {
+            .family-info {
+                align-items: center;
+                gap: 16px;
+                padding: 24px;
+                margin: 32px 0;
+                font-size: 1rem;
+            }
         }
         
         .family-info i {
@@ -775,15 +929,30 @@
         .cta-section {
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(251, 191, 36, 0.1) 100%);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 48px;
-            margin-top: 64px;
+            border-radius: 20px;
+            padding: 32px 24px;
+            margin-top: 48px;
             text-align: center;
         }
         
+        @media (min-width: 640px) {
+            .cta-section {
+                border-radius: 24px;
+                padding: 48px;
+                margin-top: 64px;
+            }
+        }
+        
         .cta-section h3 {
-            font-size: 2rem;
-            margin-bottom: 16px;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        
+        @media (min-width: 640px) {
+            .cta-section h3 {
+                font-size: 2rem;
+                margin-bottom: 16px;
+            }
         }
         
         .cta-section p {
@@ -794,9 +963,18 @@
         
         .cta-buttons {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 16px;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        @media (min-width: 480px) {
+            .cta-buttons {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
         }
         
         /* ===== FOOTER ===== */
@@ -977,30 +1155,97 @@
         .footer-bottom p:last-child {
             margin-bottom: 0;
         }
+
+        /* ===== FLOATING CTA ===== */
+        .floating-cta {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 100;
+            animation: pulse-glow 2s ease-in-out infinite;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 9999px;
+            padding: 8px;
+        }
+
+        .floating-cta a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.9), rgba(245, 158, 11, 0.9));
+            color: #0f172a;
+            font-weight: 600;
+            border: none;
+            border-radius: 9999px;
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .floating-cta a:focus {
+            outline: none;
+            border: none;
+        }
+
+        .floating-cta a:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.5);
+            background: linear-gradient(135deg, rgba(251, 191, 36, 1), rgba(245, 158, 11, 1));
+        }
+
+        @media (max-width: 640px) {
+            .floating-cta {
+                bottom: 16px;
+                right: 16px;
+                left: 16px;
+                padding: 6px;
+            }
+
+            .floating-cta a {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.4); }
+        }
     </style>
 </head>
 <body>
+    <!-- Global Floating Particles -->
+    <div class="global-particles" id="globalParticles"></div>
+
     <!-- Navigation -->
     <nav class="nav scrolled" id="nav">
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="nav-logo">
-                    <div class="nav-logo-icon">
-                        <i data-lucide="church" style="width: 20px; height: 20px; color: white;"></i>
-                    </div>
-                    <span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.25rem;">The Stream</span>
+                    <img src="img/logo1.png" alt="The Stream Logo" style="height: 40px; width: auto;">
                 </a>
                 
                 <div class="nav-links">
                     <a href="index.html" class="nav-link">Inicio</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Quienes somos <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-left: 4px;"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="nuestros-pastores.html" class="dropdown-item">Nuestros Pastores</a>
+                            <a href="mision-vision.html" class="dropdown-item">Misión y Visión</a>
+                            <a href="que-esperar.html" class="dropdown-item">Qué Esperar</a>
+                        </div>
+                    </div>
                     <a href="index.html#servicios" class="nav-link">Servicios</a>
                     <a href="index.html#eventos" class="nav-link">Eventos</a>
-                    <a href="index.html#pastores" class="nav-link">Pastores</a>
                     <a href="index.html#contacto" class="nav-link">Contacto</a>
                 </div>
                 
                 <div class="nav-cta">
-                    <a href="https://www.facebook.com/TheStreamChurchNJ/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 8px 24px; font-size: 14px;">Conectar</a>
+                    <a href="ofrendas.html" class="btn-primary" style="padding: 8px 24px; font-size: 14px;">Ofrendas</a>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
@@ -1014,16 +1259,26 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="glass-card" style="padding: 8px;">
             <a href="index.html">Inicio</a>
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-dropdown-toggle" onclick="toggleMobileDropdown(event)">Quienes somos <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-left: 4px;"></i></a>
+                    <div class="mobile-dropdown-menu" id="mobileDropdownMenu">
+                        <a href="nuestros-pastores.html" style="padding-left: 32px; font-size: 14px;">Nuestros Pastores</a>
+                        <a href="mision-vision.html" style="padding-left: 32px; font-size: 14px;">Misión y Visión</a>
+                        <a href="que-esperar.html" style="padding-left: 32px; font-size: 14px;">Qué Esperar</a>
+                    </div>
+            </div>
             <a href="index.html#servicios">Servicios</a>
             <a href="index.html#eventos">Eventos</a>
-            <a href="index.html#pastores">Pastores</a>
             <a href="index.html#contacto">Contacto</a>
+            <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 8px 0;"></div>
+            <a href="ofrendas.html" class="btn-primary" style="text-align: center;">Ofrendas</a>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg"></div>
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-bg-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge glass-card animate-fade-in-up">
                 <i data-lucide="heart" style="width: 16px; height: 16px;"></i>
@@ -1451,6 +1706,54 @@
         document.querySelectorAll('.scroll-reveal').forEach(el => {
             observer.observe(el);
         });
+
+        // Parallax effect for hero background
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const heroBg = document.getElementById('heroBg');
+            if (heroBg) {
+                heroBg.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+            }
+        });
+
+        // Create global particles overlay
+        const globalParticlesContainer = document.getElementById('globalParticles');
+        if (globalParticlesContainer) {
+            for (let i = 0; i < 60; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 3 + 's';
+                particle.style.animationDuration = (3 + Math.random() * 2) + 's';
+                globalParticlesContainer.appendChild(particle);
+            }
+        }
+    </script>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="ofrendas.html">
+            <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+            Donar Ahora
+        </a>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(event) {
+            event.preventDefault();
+            const dropdownMenu = document.getElementById('mobileDropdownMenu');
+            dropdownMenu.classList.toggle('active');
+            const icon = event.currentTarget.querySelector('i');
+            if (dropdownMenu.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
     </script>
 </body>
 </html>

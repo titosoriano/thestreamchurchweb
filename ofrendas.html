@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofrendas y Diezmos - Mission Baptist Church The Stream</title>
+    <meta name="description" content="Dona a Mission Baptist Church The Stream. Ofrendas, diezmos y donaciones. Honra a Jehová con tus bienes.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #020617;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+            min-width: 320px;
+        }
+        
+        html, body {
+            max-width: 100%;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* ===== UTILITY CLASSES ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 16px;
+            box-sizing: border-box;
+        }
+        
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+        }
+        
+        .section-padding {
+            padding: 60px 0;
+            width: 100%;
+        }
+        
+        @media (min-width: 640px) {
+            .section-padding {
+                padding: 80px 0;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 112px 0;
+            }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        }
+        
+        .glass-card-strong {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #93c5fd, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text-gold {
+            background: linear-gradient(to right, #fbbf24, #f59e0b, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            font-weight: 500;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #0f172a;
+            font-weight: 500;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.4);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.6);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 32px;
+            background: transparent;
+            color: #fbbf24;
+            font-weight: 500;
+            border-radius: 9999px;
+            border: 2px solid rgba(251, 191, 36, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(251, 191, 36, 0.1);
+            border-color: #fbbf24;
+            transform: translateY(-2px);
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.6); }
+        }
+        
+        /* ===== MOBILE RESPONSIVE FIXES ===== */
+        @media (max-width: 767px) {
+            /* Hero section mobile fixes */
+            .hero-content {
+                padding: 100px 16px 60px;
+            }
+            
+            .scripture-container {
+                padding: 24px 20px;
+                margin: 0 auto 32px;
+            }
+            
+            .scripture-container::before {
+                font-size: 80px;
+                top: -10px;
+                left: 10px;
+            }
+            
+            /* Widget container mobile fixes */
+            .breeze-widget-wrapper {
+                padding: 16px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            #breeze_giving_embed {
+                min-width: 280px;
+            }
+            
+            /* Text giving cards mobile fixes */
+            .text-giving-grid {
+                gap: 16px;
+            }
+            
+            .text-card {
+                padding: 20px;
+            }
+            
+            .text-hero-card {
+                padding: 24px 20px;
+            }
+            
+            .text-card-title {
+                font-size: 1.1rem;
+            }
+            
+            .text-card-command {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+            
+            /* Methods grid mobile fixes */
+            .methods-grid {
+                gap: 16px;
+            }
+            
+            .method-card {
+                padding: 24px;
+            }
+            
+            .method-title {
+                font-size: 1.25rem;
+            }
+            
+            .method-content {
+                font-size: 15px;
+            }
+            
+            /* Vision quote mobile fixes */
+            .vision-quote {
+                padding: 32px 24px;
+                font-size: 1.125rem;
+            }
+            
+            .vision-quote::before,
+            .vision-quote::after {
+                width: 40px;
+                height: 40px;
+            }
+            
+            /* Zelle email container mobile fixes */
+            .zelle-email-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 16px;
+            }
+            
+            .zelle-email {
+                text-align: center;
+                word-break: break-all;
+                font-size: 13px;
+            }
+            
+            .copy-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            /* Phone number container in text hero card */
+            .text-hero-card .zelle-email-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .text-hero-card .phone-number {
+                font-size: 1.25rem;
+                width: 100%;
+                text-align: center;
+            }
+            
+            /* Footer mobile fixes */
+            .footer {
+                padding: 48px 0 24px;
+            }
+            
+            .footer-links {
+                gap: 16px;
+            }
+            
+            /* Section subtitle mobile fix */
+            .section-subtitle {
+                font-size: 1rem;
+                padding: 0 8px;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .hero-badge {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+            
+            .section-badge {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+            
+            .text-card {
+                padding: 16px;
+            }
+            
+            .text-card-icon {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .method-card {
+                padding: 20px;
+            }
+            
+            .method-icon {
+                width: 48px;
+                height: 48px;
+            }
+            
+            .vision-quote {
+                padding: 24px 16px;
+                font-size: 1rem;
+            }
+            
+            .tax-badge {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+                padding: 12px 20px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+        
+        /* Scroll Reveal */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #3b82f6, #fbbf24);
+            border-radius: 4px;
+        }
+        
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        
+        .nav.scrolled,
+        .nav.menu-open {
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-content {
+                height: 80px;
+            }
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 40px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-logo:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-links {
+            display: none;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+        }
+        
+        .nav-link {
+            padding: 8px 16px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(2, 6, 23, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 8px 0;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 10px 16px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Mobile Dropdown */
+        .mobile-dropdown-menu {
+            display: none;
+            flex-direction: column;
+        }
+        
+        .mobile-dropdown-menu.active {
+            display: flex;
+        }
+        
+        .nav-cta {
+            display: none;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-cta {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+        
+        .nav-cta a {
+            padding: 8px 24px;
+            font-size: 14px;
+        }
+        
+        .mobile-menu-btn {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        @media (min-width: 768px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 64px;
+            left: 16px;
+            right: 16px;
+            z-index: 40;
+            animation: fade-in 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: white;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease;
+        }
+        
+        .mobile-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero-ofrendas {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: url('img/donate1.jpg') center center / cover no-repeat;
+            overflow: hidden;
+        }
+        
+        .hero-ofrendas::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(2, 6, 23, 0.85) 0%, rgba(15, 23, 42, 0.75) 50%, rgba(2, 6, 23, 0.85) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 120px 16px 80px;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 9999px;
+            color: #fbbf24;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 32px;
+            line-height: 1.1;
+        }
+        
+        .scripture-container {
+            max-width: 800px;
+            margin: 0 auto 48px;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 24px;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            position: relative;
+        }
+        
+        .scripture-container::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 120px;
+            color: rgba(251, 191, 36, 0.1);
+            line-height: 1;
+        }
+        
+        .scripture-text {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-style: italic;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .scripture-ref {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 32px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #ffffff;
+            font-size: 12px;
+            animation: bounce-slow 2s ease-in-out infinite;
+            text-align: center;
+        }
+        
+        .scroll-indicator span {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
+            animation: glow-pulse 2s ease-in-out infinite;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .scroll-indicator i {
+            color: #ffffff;
+        }
+        
+        @keyframes glow-pulse {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
+                opacity: 1;
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
+                opacity: 0.95;
+            }
+        }
+        
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* ===== DONATION SECTIONS ===== */
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 9999px;
+            color: #fbbf24;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+        
+        /* ===== ONLINE DONATION WIDGET ===== */
+        .online-donation {
+            background: linear-gradient(to bottom, #0f172a, #020617);
+            position: relative;
+        }
+        
+        .widget-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .widget-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 70%);
+            filter: blur(60px);
+            pointer-events: none;
+        }
+        
+        .breeze-widget-wrapper {
+            padding: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* ===== TEXT GIVING CARDS ===== */
+        .text-giving {
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            position: relative;
+        }
+        
+        .text-giving-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .text-giving-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .text-giving-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .text-card {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .text-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(251, 191, 36, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .text-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .text-card-icon.offerings { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+        .text-card-icon.missions { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .text-card-icon.grace { background: linear-gradient(135deg, #10b981, #059669); }
+        .text-card-icon.building { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+        .text-card-icon.events { background: linear-gradient(135deg, #ec4899, #db2777); }
+        .text-card-icon.merch { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+        .text-card-icon.children { background: linear-gradient(135deg, #f97316, #ea580c); }
+        
+        .text-card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .text-card-command {
+            font-family: 'Courier New', monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #fbbf24;
+            margin-bottom: 8px;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+        }
+        
+        .text-card-desc {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .text-hero-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(59, 130, 246, 0.1));
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 32px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .text-hero-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(251, 191, 36, 0.03), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        .phone-number {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #fbbf24;
+            margin: 16px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        /* ===== OTHER METHODS ===== */
+        .other-methods {
+            background: #020617;
+        }
+        
+        .methods-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .methods-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .method-card {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Copy button for Zelle email */
+        .zelle-email-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            width: 100%;
+        }
+        
+        .zelle-email {
+            color: #fbbf24;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            flex: 1;
+            word-break: break-all;
+        }
+        
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        
+        .copy-btn.copied {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        
+        .copy-btn.copied svg {
+            animation: checkmark-pop 0.3s ease;
+        }
+        
+        @keyframes checkmark-pop {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .method-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(251, 191, 36, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fbbf24;
+        }
+        
+        .method-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .method-content {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+        
+        .method-content strong {
+            color: #fbbf24;
+        }
+        
+        .method-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #3b82f6;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .method-link:hover {
+            color: #60a5fa;
+            gap: 12px;
+        }
+        
+        /* ===== VISION SECTION ===== */
+        .vision-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vision-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(251, 191, 36, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .vision-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .vision-quote {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            line-height: 1.8;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            padding: 48px;
+        }
+        
+        .vision-quote::before,
+        .vision-quote::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(251, 191, 36, 0.3);
+        }
+        
+        .vision-quote::before {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .vision-quote::after {
+            bottom: 0;
+            right: 0;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .vision-highlight {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        /* ===== TAX INFO ===== */
+        .tax-section {
+            background: #020617;
+            padding: 48px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tax-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 9999px;
+            color: #10b981;
+            font-size: 14px;
+        }
+        
+        .tax-text {
+            max-width: 700px;
+            margin: 24px auto 0;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            background: linear-gradient(to bottom, #020617, #0f172a);
+            padding: 64px 0 32px;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-brand {
+            margin-bottom: 32px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #fbbf24;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            background: rgba(251, 191, 36, 0.2);
+            border-color: rgba(251, 191, 36, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+        }
+        
+        /* ===== FLOATING CTA ===== */
+        .floating-cta {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 100;
+            animation: pulse-glow 2s ease-in-out infinite;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 9999px;
+            padding: 8px;
+        }
+        
+        .floating-cta a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.9), rgba(245, 158, 11, 0.9));
+            color: #0f172a;
+            font-weight: 600;
+            border: none;
+            border-radius: 9999px;
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        
+        .floating-cta a:focus {
+            outline: none;
+            border: none;
+        }
+        
+        .floating-cta a:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.5);
+            background: linear-gradient(135deg, rgba(251, 191, 36, 1), rgba(245, 158, 11, 1));
+        }
+        
+        @media (max-width: 640px) {
+            .floating-cta {
+                bottom: 16px;
+                right: 16px;
+                left: 16px;
+                padding: 6px;
+            }
+            
+            .floating-cta a {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    <img src="img/logo1.png" alt="The Stream Logo" style="height: 40px; width: auto;">
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Quienes somos <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-left: 4px;"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="nuestros-pastores.html" class="dropdown-item">Nuestros Pastores</a>
+                            <a href="mision-vision.html" class="dropdown-item">Misión y Visión</a>
+                            <a href="que-esperar.html" class="dropdown-item">Qué Esperar</a>
+                        </div>
+                    </div>
+                    <a href="index.html#servicios" class="nav-link">Servicios</a>
+                    <a href="index.html#en-vivo" class="nav-link">En Vivo</a>
+                    <a href="index.html#comunidad" class="nav-link">Comunidad</a>
+                    <a href="ofrendas.html" class="nav-link" style="color: #fbbf24;">Ofrendas</a>
+                </div>
+                
+                <div class="nav-cta">
+                    <a href="ofrendas.html" class="btn-primary" style="padding: 8px 24px; font-size: 14px;">Ofrendas</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <i data-lucide="menu" style="width: 20px; height: 20px; color: white;" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="glass-card-strong" style="padding: 16px;">
+                <a href="index.html">Inicio</a>
+                <div class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-toggle" onclick="toggleMobileDropdown(event)">Quienes somos <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-left: 4px;"></i></a>
+                    <div class="mobile-dropdown-menu" id="mobileDropdownMenu">
+                        <a href="nuestros-pastores.html" style="padding-left: 32px; font-size: 14px;">Nuestros Pastores</a>
+                        <a href="mision-vision.html" style="padding-left: 32px; font-size: 14px;">Misión y Visión</a>
+                        <a href="que-esperar.html" style="padding-left: 32px; font-size: 14px;">Qué Esperar</a>
+                    </div>
+                </div>
+                <a href="index.html#servicios">Servicios</a>
+                <a href="index.html#en-vivo">En Vivo</a>
+                <a href="index.html#eventos">Eventos</a>
+                <a href="index.html#comunidad">Comunidad</a>
+                <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 8px 0;"></div>
+                <a href="ofrendas.html" class="btn-primary" style="text-align: center;">Ofrendas</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-ofrendas">
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in-up">
+                <i data-lucide="heart" style="width: 16px; height: 16px;"></i>
+                <span>Generosidad</span>
+            </div>
+            
+            <h1 class="hero-title animate-fade-in-up delay-200">
+                Ofrendas y <span class="gradient-text-gold">Diezmos</span>
+            </h1>
+            
+            <div class="scripture-container animate-fade-in-up delay-300 scroll-reveal">
+                <p class="scripture-text">
+                    Honra a Jehová con tus bienes, Y con las primicias de todos tus frutos; Y serán llenos tus graneros con abundancia, Y tus lagares rebosarán de mosto.
+                </p>
+                <p class="scripture-ref">Proverbios 3:9-10</p>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Desplázate para ver más</span>
+            <i data-lucide="chevron-down" style="width: 24px; height: 24px;"></i>
+        </div>
+    </section>
+
+    <!-- Online Donation Section -->
+    <section class="section-padding online-donation" id="donar">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div class="section-badge scroll-reveal">
+                    <i data-lucide="credit-card" style="width: 18px; height: 18px;"></i>
+                    <span>Donación en Línea</span>
+                </div>
+                <h2 class="section-title scroll-reveal">
+                    Dona de Forma <span class="gradient-text">Segura</span>
+                </h2>
+                <p class="section-subtitle scroll-reveal">
+                    Utiliza nuestro sistema seguro para hacer tu ofrenda o diezmo en línea
+                </p>
+            </div>
+            
+            <div class="widget-container scroll-reveal">
+                <div class="widget-glow"></div>
+                <div class="glass-card-strong breeze-widget-wrapper">
+                    <div id="breeze_giving_embed" data-subdomain="thestream" data-width="100%" data-background_color="ffffff" data-text_color="000" data-donate_button_background_color="777777" data-donate_button_text_color="ffffff" data-fund_id="" data-frequency="" data-amount=""></div>
+                    <script src="https://app.breezechms.com/js/give.js"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Giving Section -->
+    <section class="section-padding text-giving">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div class="section-badge scroll-reveal">
+                    <i data-lucide="smartphone" style="width: 18px; height: 18px;"></i>
+                    <span>Donación por Texto</span>
+                </div>
+                <h2 class="section-title scroll-reveal">
+                    Dona por <span class="gradient-text-gold">Mensaje de Texto</span>
+                </h2>
+                <p class="section-subtitle scroll-reveal">
+                    Es rápido, fácil y seguro. Envía un mensaje de texto y sigue las instrucciones.
+                </p>
+            </div>
+            
+            <div class="text-giving-grid">
+                <!-- Hero Card -->
+                <div class="text-card text-hero-card scroll-reveal">
+                    <div style="position: relative; z-index: 1;">
+                        <i data-lucide="smartphone" style="width: 48px; height: 48px; color: #fbbf24; margin-bottom: 16px;"></i>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Envía un Texto</h3>
+                        <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 16px;">
+                            Manda un texto con la cantidad a este número
+                        </p>
+                        <div class="zelle-email-container" style="margin-bottom: 16px;">
+                            <span class="phone-number" style="margin: 0; flex: 1;">(908)503-5715</span>
+                            <button type="button" class="copy-btn" onclick="copyPhoneNumber()" id="copyPhoneBtn" aria-label="Copiar número">
+                                <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                                <span>Copiar</span>
+                            </button>
+                        </div>
+                        <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px;">
+                            Recibirás instrucciones de cómo dar automáticamente por medio de un texto.<br>
+                            También puedes mandar un texto con la palabra <strong style="color: #fbbf24;">commands</strong> para más opciones.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Category Cards -->
+                <div class="text-card scroll-reveal">
+                    <div class="text-card-icon offerings">
+                        <i data-lucide="church" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h4 class="text-card-title">Ofrendas</h4>
+                    <div class="text-card-command">$50 diezmo</div>
+                    <p class="text-card-desc">Envía cualquier monto para ofrendas generales</p>
+                </div>
+                
+                <div class="text-card scroll-reveal">
+                    <div class="text-card-icon missions">
+                        <i data-lucide="globe" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h4 class="text-card-title">Misiones</h4>
+                    <div class="text-card-command">$50 misiones</div>
+                    <p class="text-card-desc">Apoya nuestros proyectos misioneros</p>
+                </div>
+                
+                <div class="text-card scroll-reveal">
+                    <div class="text-card-icon grace">
+                        <i data-lucide="heart-handshake" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h4 class="text-card-title">Grace Foundation</h4>
+                    <div class="text-card-command">$50 grace</div>
+                    <p class="text-card-desc">Ministerio de ayuda comunitaria</p>
+                </div>
+                
+                <div class="text-card scroll-reveal">
+                    <div class="text-card-icon building">
+                        <i data-lucide="building-2" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h4 class="text-card-title">Construcción</h4>
+                    <div class="text-card-command">$50 construccion</div>
+                    <p class="text-card-desc">Fondo para mejoras del edificio</p>
+                </div>
+                
+                <div class="text-card scroll-reveal">
+                    <div class="text-card-icon events">
+                        <i data-lucide="calendar" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h4 class="text-card-title">Eventos</h4>
+                    <div class="text-card-command">$50 evento</div>
+                    <p class="text-card-desc">Apoya eventos especiales de la iglesia</p>
+                </div>
+                
+                <div class="text-card scroll-reveal">
+                    <div class="text-card-icon merch">
+                        <i data-lucide="shopping-bag" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h4 class="text-card-title">Merch</h4>
+                    <div class="text-card-command">$50 merch</div>
+                    <p class="text-card-desc">Productos y materiales de la iglesia</p>
+                </div>
+                
+                <div class="text-card scroll-reveal">
+                    <div class="text-card-icon children">
+                        <i data-lucide="baby" style="width: 24px; height: 24px; color: white;"></i>
+                    </div>
+                    <h4 class="text-card-title">Ministerio Infantil</h4>
+                    <div class="text-card-command">$50 ninos</div>
+                    <p class="text-card-desc">Apoya el ministerio de niños</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.5); font-size: 14px; margin-top: 32px;">
+                (Reemplaza $50 con la cantidad que deseas donar)
+            </p>
+        </div>
+    </section>
+
+    <!-- Other Methods Section -->
+    <section class="section-padding other-methods">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div class="section-badge scroll-reveal">
+                    <i data-lucide="wallet" style="width: 18px; height: 18px;"></i>
+                    <span>Otros Métodos</span>
+                </div>
+                <h2 class="section-title scroll-reveal">
+                    Más Formas de <span class="gradient-text">Dar</span>
+                </h2>
+            </div>
+            
+            <div class="methods-grid">
+                <div class="glass-card-strong method-card scroll-reveal">
+                    <div class="method-icon">
+                        <i data-lucide="car" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3 class="method-title">Donación de Vehículo</h3>
+                    <p class="method-content">
+                        ¿Tienes un vehículo que ya no usas? Puedes donarlo y recibir beneficios fiscales.
+                    </p>
+                    <a href="https://careasy.org/nonprofit/missionbaptistchurchinc" target="_blank" rel="noopener noreferrer" class="method-link">
+                        Donar tu carro
+                        <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                    </a>
+                </div>
+                
+                <div class="glass-card-strong method-card scroll-reveal">
+                    <div class="method-icon">
+                        <i data-lucide="banknote" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3 class="method-title">Cheque o Efectivo</h3>
+                    <p class="method-content">
+                        Puedes hacer un cheque pagable a:<br>
+                        <strong>The Stream</strong><br><br>
+                        Envíalo a:<br>
+                        409B E Main St<br>
+                        Bound Brook, NJ 08805
+                    </p>
+                </div>
+                
+                <div class="glass-card-strong method-card scroll-reveal">
+                    <div class="method-icon">
+                        <i data-lucide="zap" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3 class="method-title">Zelle</h3>
+                    <p class="method-content">
+                        Envía tus ofrendas o diezmos por medio de Zelle a este correo electrónico:
+                    </p>
+                    <div class="zelle-email-container">
+                        <span class="zelle-email" id="zelleEmail">zelle@thestreamchurch.org</span>
+                        <button class="copy-btn" onclick="copyZelleEmail()" id="copyBtn">
+                            <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                            <span>Copiar</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="glass-card-strong method-card scroll-reveal">
+                    <div class="method-icon">
+                        <i data-lucide="building" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3 class="method-title">Transferencia Bancaria</h3>
+                    <p class="method-content">
+                        Para donaciones directas de cuenta bancaria, por favor contacta a la oficina de la iglesia para obtener la información de transferencia.
+                    </p>
+                    <a href="tel:9089386852" class="method-link">
+                        <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                        Llamar a la oficina
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section-padding vision-section">
+        <div class="container">
+            <div class="vision-container">
+                <div style="text-align: center; margin-bottom: 48px;">
+                    <div class="section-badge scroll-reveal">
+                        <i data-lucide="eye" style="width: 18px; height: 18px;"></i>
+                        <span>Nuestra Visión</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card-strong vision-quote scroll-reveal">
+                    La visión de nuestra iglesia es ser una comunidad de fe en la que <span class="vision-highlight">el amor y la compasión</span> sean el centro de todo lo que hacemos. Nos esforzamos por ser un <span class="vision-highlight">refugio de esperanza</span> y ayuda para aquellos que se encuentran en situaciones difíciles, especialmente en lo que se refiere a la necesidad de alimento y sustento.<br><br>
+                    
+                    Creemos que, como cristianos, tenemos el deber de <span class="vision-highlight">compartir nuestros recursos</span> con aquellos que necesitan ayuda, y que al hacerlo podemos extender el amor de Dios a aquellos que más lo necesitan. Nuestra visión es ser una iglesia que no sólo predique el amor, sino que lo demuestre a través de nuestras acciones.<br><br>
+                    
+                    Queremos ser <span class="vision-highlight">una luz en la oscuridad</span>, un oasis en el desierto, un lugar de refugio y esperanza para todos los que buscan un sentido de comunidad y propósito en sus vidas por medio de Nuestro Señor Jesucristo.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Section -->
+    <section class="tax-section">
+        <div class="container">
+            <div class="tax-badge scroll-reveal">
+                <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
+                <span>Organización Sin Fines de Lucro 501(c)(3)</span>
+            </div>
+            <p class="tax-text scroll-reveal">
+                Mission Baptist Church Inc is a 501(c)(3) organization, with an IRS ruling year of 2025, and donations are tax-deductible. Todas las donaciones son deducibles de impuestos según la ley federal de los Estados Unidos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand scroll-reveal">
+                    <h3>Mission Baptist Church</h3>
+                    <p class="gradient-text" style="font-size: 1.25rem; font-weight: 600;">The Stream</p>
+                    <p>"Un Lugar de Gracia"</p>
+                </div>
+                
+                <div class="footer-links scroll-reveal">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#servicios">Servicios</a>
+                    <a href="index.html#en-vivo">En Vivo</a>
+                    <a href="index.html#comunidad">Comunidad</a>
+                    <a href="ofrendas.html">Ofrendas</a>
+                </div>
+                
+                <div class="footer-social scroll-reveal">
+                    <a href="https://www.instagram.com/thestreamchurch/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                        <i data-lucide="instagram" style="width: 20px; height: 20px; color: white;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/TheStreamChurchNJ/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i data-lucide="facebook" style="width: 20px; height: 20px; color: white;"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCIFR8v6PMjHfYO1MyUnMaCQ" target="_blank" rel="noopener noreferrer" title="YouTube">
+                        <i data-lucide="youtube" style="width: 20px; height: 20px; color: white;"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-bottom scroll-reveal">
+                    <p>&copy; <span id="year"></span> Mission Baptist Church The Stream. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="#donar">
+            <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+            Donar Ahora
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        let isMenuOpen = false;
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('active', isMenuOpen);
+            menuIcon.setAttribute('data-lucide', isMenuOpen ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+        
+        // Close mobile menu when clicking a real nav link (not dropdown toggle)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.classList.contains('mobile-dropdown-toggle')) return;
+                isMenuOpen = false;
+                mobileMenu.classList.remove('active');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+        
+        // Navbar scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll reveal observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Copy phone number (digits only for pasting into dialer/text)
+        function copyPhoneNumber() {
+            const phone = '9085035715';
+            const copyBtn = document.getElementById('copyPhoneBtn');
+            const originalContent = copyBtn.innerHTML;
+            navigator.clipboard.writeText(phone).then(() => {
+                copyBtn.classList.add('copied');
+                copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copiado!</span>';
+                setTimeout(() => {
+                    copyBtn.classList.remove('copied');
+                    copyBtn.innerHTML = originalContent;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }, 2000);
+            }).catch(() => {
+                const ta = document.createElement('textarea');
+                ta.value = phone;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                copyBtn.classList.add('copied');
+                copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copiado!</span>';
+                setTimeout(() => {
+                    copyBtn.classList.remove('copied');
+                    copyBtn.innerHTML = originalContent;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }, 2000);
+            });
+        }
+        
+        // Copy Zelle email function
+        function copyZelleEmail() {
+            const email = document.getElementById('zelleEmail').textContent;
+            const copyBtn = document.getElementById('copyBtn');
+            const originalContent = copyBtn.innerHTML;
+            
+            navigator.clipboard.writeText(email).then(() => {
+                copyBtn.classList.add('copied');
+                copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copiado!</span>';
+                
+                setTimeout(() => {
+                    copyBtn.classList.remove('copied');
+                    copyBtn.innerHTML = originalContent;
+                    lucide.createIcons();
+                }, 2000);
+            }).catch(err => {
+                console.error('Error al copiar:', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = email;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                copyBtn.classList.add('copied');
+                copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copiado!</span>';
+                
+                setTimeout(() => {
+                    copyBtn.classList.remove('copied');
+                    copyBtn.innerHTML = originalContent;
+                    lucide.createIcons();
+                }, 2000);
+            });
+        }
+        
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(event) {
+            event.preventDefault();
+            const dropdownMenu = document.getElementById('mobileDropdownMenu');
+            dropdownMenu.classList.toggle('active');
+            const icon = event.currentTarget.querySelector('i');
+            if (dropdownMenu.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mission Baptist Church - The Stream | Un Lugar de Gracia</title>
     <meta name="description" content="Mission Baptist Church The Stream - A Place of Grace. Servicios en Warren, NJ.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -27,16 +27,13 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Raleway', sans-serif;
             background-color: #020617;
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
             width: 100%;
             min-width: 320px;
-            padding-left: env(safe-area-inset-left);
-            padding-right: env(safe-area-inset-right);
-            padding-bottom: env(safe-area-inset-bottom);
         }
         
         html, body {
@@ -44,7 +41,8 @@
         }
         
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
         }
         
         a {
@@ -64,24 +62,19 @@
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            padding-top: 0;
-            padding-bottom: 0;
-            padding-left: max(16px, env(safe-area-inset-left));
-            padding-right: max(16px, env(safe-area-inset-right));
+            padding: 0 16px;
             box-sizing: border-box;
         }
         
         @media (min-width: 640px) {
             .container {
-                padding-left: max(24px, env(safe-area-inset-left));
-                padding-right: max(24px, env(safe-area-inset-right));
+                padding: 0 24px;
             }
         }
         
         @media (min-width: 1024px) {
             .container {
-                padding-left: max(32px, env(safe-area-inset-left));
-                padding-right: max(32px, env(safe-area-inset-right));
+                padding: 0 32px;
             }
         }
         
@@ -117,6 +110,11 @@
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
             overflow: hidden;
+        }
+        
+        /* Boxcast wrapper: allow overflow so playlist/thumbnails are not clipped */
+        .glass-card-strong.boxcast-wrapper {
+            overflow: visible;
         }
         
         .gradient-text {
@@ -281,12 +279,13 @@
             right: 0;
             z-index: 50;
             transition: all 0.3s ease;
-            padding-top: env(safe-area-inset-top);
         }
         
-        .nav.scrolled {
-            background: rgba(2, 6, 23, 0.9);
+        .nav.scrolled,
+        .nav.menu-open {
+            background: rgba(2, 6, 23, 0.8);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
@@ -306,22 +305,16 @@
         .nav-logo {
             display: flex;
             align-items: center;
-            gap: 8px;
         }
         
-        .nav-logo-icon {
-            width: 40px;
+        .nav-logo img {
             height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #3b82f6, #f59e0b);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: auto;
             transition: transform 0.3s ease;
         }
         
-        .nav-logo:hover .nav-logo-icon {
-            transform: scale(1.1);
+        .nav-logo:hover img {
+            transform: scale(1.05);
         }
         
         .nav-links {
@@ -348,6 +341,57 @@
         .nav-link:hover {
             color: white;
             background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(2, 6, 23, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 8px 0;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 10px 16px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Mobile Dropdown */
+        .mobile-dropdown-menu {
+            display: none;
+            flex-direction: column;
+        }
+        
+        .mobile-dropdown-menu.active {
+            display: flex;
         }
         
         .nav-cta {
@@ -387,9 +431,9 @@
         .mobile-menu {
             display: none;
             position: fixed;
-            top: calc(64px + env(safe-area-inset-top));
-            left: max(16px, env(safe-area-inset-left));
-            right: max(16px, env(safe-area-inset-right));
+            top: 64px;
+            left: 16px;
+            right: 16px;
             z-index: 40;
             animation: fade-in 0.3s ease;
         }
@@ -399,10 +443,8 @@
         }
         
         .mobile-menu a {
-            display: flex;
-            align-items: center;
-            padding: 14px 20px;
-            min-height: 48px;
+            display: block;
+            padding: 12px 16px;
             color: rgba(255, 255, 255, 0.8);
             border-radius: 12px;
             transition: all 0.3s ease;
@@ -417,14 +459,11 @@
         .hero {
             position: relative;
             min-height: 100vh;
-            min-height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            padding-top: max(80px, calc(64px + env(safe-area-inset-top)));
-            padding-left: max(20px, env(safe-area-inset-left));
-            padding-right: max(20px, env(safe-area-inset-right));
+            padding-top: 80px;
             width: 100%;
             margin: 0 auto;
         }
@@ -436,12 +475,38 @@
             background-position: 50% 50%;
             width: 100%;
             height: 100%;
+            will-change: transform;
+        }
+        
+        /* Parallax Backgrounds */
+        .parallax-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            will-change: transform;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
         }
         
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to bottom, rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.7), #020617);
+        }
+        
+        /* Parallax overlay style */
+        .parallax-overlay {
+            position: absolute;
+            inset: 0;
+        }
+        
+        /* Evitar scrollbar en secciones con parallax: recortar contenido transformado */
+        .has-parallax,
+        section:has(.parallax-bg) {
+            overflow: hidden !important;
+            overflow-x: hidden !important;
         }
         
         .hero-particles {
@@ -458,6 +523,22 @@
             background: rgba(96, 165, 250, 0.3);
             border-radius: 50%;
             animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Global Particles Overlay */
+        .global-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 5;
+            overflow: hidden;
+        }
+        
+        .global-particles .particle {
+            opacity: 0.5;
         }
         
         .hero-content {
@@ -531,7 +612,7 @@
             font-weight: 300;
             font-style: italic;
             margin-bottom: 32px;
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Raleway', sans-serif;
         }
         
         @media (min-width: 640px) {
@@ -901,17 +982,43 @@
             font-weight: 600;
         }
         
-        /* Boxcast Widget Styles - Transparent background, no white frame */
-        #boxcast-widget-fgejutg1ypf8iy0eejtk {
-            background-color: transparent !important;
-            max-width: 100%;
-            overflow: hidden;
+        .envivo-feature .social-btn {
+            font-size: 14px;
         }
-        #boxcast-widget-fgejutg1ypf8iy0eejtk *,
-        #boxcast-widget-fgejutg1ypf8iy0eejtk iframe,
-        #boxcast-widget-fgejutg1ypf8iy0eejtk iframe * {
-            color: inherit !important;
-            background-color: transparent !important;
+        
+        .envivo-feature .social-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+        
+        .envivo-feature .social-btn.facebook:hover {
+            box-shadow: 0 6px 25px rgba(24, 119, 242, 0.6);
+            background: linear-gradient(135deg, #1a7bf0, #1877f2);
+        }
+        
+        .envivo-feature .social-btn.youtube:hover {
+            box-shadow: 0 6px 25px rgba(255, 0, 0, 0.6);
+            background: linear-gradient(135deg, #ff1a1a, #ff0000);
+        }
+        
+        @media (max-width: 640px) {
+            .envivo-feature .social-btn {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+            
+            .envivo-feature .social-btn span {
+                display: none;
+            }
+        }
+        
+        /* Boxcast Widget - Minimal styling, let BoxCast handle internals */
+        .boxcast-wrapper {
+            min-height: 500px;
+        }
+        
+        #boxcast-widget-fgejutg1ypf8iy0eejtk,
+        #boxcast-widget-fgejutg1ypf8iy0eejtk * {
+            color: #000000 !important;
         }
         
         /* ===== PASTORES SECTION ===== */
@@ -1224,7 +1331,8 @@
             font-size: 1.25rem;
             line-height: 1.6;
             margin-bottom: 32px;
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
         }
         
         @media (min-width: 640px) {
@@ -1431,7 +1539,7 @@
             font-style: italic;
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 24px;
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Raleway', sans-serif;
         }
         
         .footer-contact {
@@ -1520,6 +1628,73 @@
             }
         }
         
+        /* Make slideshow images clickable */
+        .slideshow-item {
+            cursor: pointer;
+        }
+        
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .lightbox-modal.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+        
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .lightbox-caption {
+            color: white;
+            text-align: center;
+            margin-top: 16px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
         .footer-contact a .external {
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -1530,7 +1705,7 @@
         }
         
         .footer h4 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Raleway', sans-serif;
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 16px;
@@ -1634,118 +1809,21 @@
             overflow-x: hidden;
         }
         
-        /* Touch targets and mobile layout (max 640px) */
-        @media (max-width: 640px) {
-            .section-padding {
-                padding-top: 48px;
-                padding-bottom: 48px;
-            }
-            .section-header {
-                margin-bottom: 32px;
-            }
-            .hero-content {
-                padding: 0 8px;
-            }
-            .hero-buttons .btn-primary,
-            .hero-buttons .hero-ghost-btn {
-                min-height: 48px;
-                padding: 14px 28px;
-                justify-content: center;
-            }
-            .servicio-card {
-                padding: 24px 20px;
-            }
-            .versiculo-card {
-                padding: 32px 20px 28px;
-            }
-            .versiculo-card blockquote {
-                font-size: 1.125rem;
-            }
-            .footer {
-                padding-top: 48px;
-                padding-bottom: 24px;
-            }
-            .footer-grid {
-                gap: 32px;
-                margin-bottom: 40px;
-            }
-            .envivo-widget {
-                min-height: 320px;
-            }
-            .scroll-reveal.visible > div {
-                min-width: 0;
-            }
-        }
-        
         @media (max-width: 480px) {
             .container {
-                padding-left: max(12px, env(safe-area-inset-left));
-                padding-right: max(12px, env(safe-area-inset-right));
+                padding: 0 12px;
             }
             
             .hero h1 {
-                font-size: 2.25rem;
+                font-size: 2.5rem;
             }
             
             .hero h2 {
-                font-size: 1.35rem;
-            }
-            
-            .hero-tagline {
-                font-size: 1.1rem;
+                font-size: 1.5rem;
             }
             
             .section-title {
-                font-size: 1.875rem;
-            }
-            
-            .section-subtitle {
-                font-size: 1rem;
-                padding: 0 8px;
-            }
-            
-            .nav-logo p {
-                font-size: 12px;
-            }
-            
-            .nav-logo p:first-child {
-                font-size: 13px;
-            }
-            
-            .mobile-menu-btn {
-                min-width: 44px;
-                min-height: 44px;
-            }
-            
-            .slideshow-item {
-                width: 180px;
-                height: 130px;
-            }
-            
-            .footer-social a {
-                min-width: 44px;
-                min-height: 44px;
-            }
-        }
-        
-        /* Very small screens (e.g. 320px) */
-        @media (max-width: 380px) {
-            .hero h1 {
                 font-size: 2rem;
-            }
-            .hero h2 {
-                font-size: 1.2rem;
-            }
-            .section-title {
-                font-size: 1.65rem;
-            }
-            .hero-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-            .hero-buttons .btn-primary,
-            .hero-buttons .hero-ghost-btn {
-                width: 100%;
             }
         }
         
@@ -1797,34 +1875,98 @@
             inset: 0;
             background: linear-gradient(to right, #020617, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.6));
         }
+
+        /* ===== FLOATING CTA ===== */
+        .floating-cta {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 100;
+            animation: pulse-glow 2s ease-in-out infinite;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 9999px;
+            padding: 8px;
+        }
+
+        .floating-cta a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.9), rgba(245, 158, 11, 0.9));
+            color: #0f172a;
+            font-weight: 600;
+            border: none;
+            border-radius: 9999px;
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .floating-cta a:focus {
+            outline: none;
+            border: none;
+        }
+
+        .floating-cta a:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.5);
+            background: linear-gradient(135deg, rgba(251, 191, 36, 1), rgba(245, 158, 11, 1));
+        }
+
+        @media (max-width: 640px) {
+            .floating-cta {
+                bottom: 16px;
+                right: 16px;
+                left: 16px;
+                padding: 6px;
+            }
+
+            .floating-cta a {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.4); }
+        }
     </style>
 </head>
 <body>
+    <!-- Global Particles Overlay -->
+    <div class="global-particles" id="globalParticles"></div>
+    
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="container">
             <div class="nav-content">
                 <a href="#inicio" class="nav-logo">
-                    <div class="nav-logo-icon">
-                        <i data-lucide="church" style="width: 20px; height: 20px; color: white;"></i>
-                    </div>
-                    <div>
-                        <p style="color: white; font-weight: 600; font-size: 14px; line-height: 1.2;">Mission Baptist</p>
-                        <p style="color: #fbbf24; font-size: 12px; line-height: 1.2;">The Stream</p>
-                    </div>
+                    <img src="img/logo1.png" alt="The Stream Logo" style="height: 40px; width: auto;">
                 </a>
                 
                 <div class="nav-links">
                     <a href="#inicio" class="nav-link">Inicio</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Quienes somos <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-left: 4px;"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="nuestros-pastores.html" class="dropdown-item">Nuestros Pastores</a>
+                            <a href="mision-vision.html" class="dropdown-item">Misión y Visión</a>
+                            <a href="que-esperar.html" class="dropdown-item">Qué Esperar</a>
+                        </div>
+                    </div>
                     <a href="#servicios" class="nav-link">Servicios</a>
                     <a href="#en-vivo" class="nav-link">En Vivo</a>
-                    <a href="#pastores" class="nav-link">Pastores</a>
                     <a href="#eventos" class="nav-link">Eventos</a>
                     <a href="#comunidad" class="nav-link">Comunidad</a>
                 </div>
                 
                 <div class="nav-cta">
-                    <a href="https://www.facebook.com/TheStreamChurchNJ/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 8px 24px; font-size: 14px;">Conectar</a>
+                    <a href="ofrendas.html" class="btn-primary" style="padding: 8px 24px; font-size: 14px;">Ofrendas</a>
                 </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
@@ -1836,19 +1978,26 @@
         <div class="mobile-menu" id="mobileMenu">
             <div class="glass-card-strong" style="padding: 16px;">
                 <a href="#inicio">Inicio</a>
+                <div class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-toggle" onclick="toggleMobileDropdown(event)">Quienes somos <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-left: 4px;"></i></a>
+                    <div class="mobile-dropdown-menu" id="mobileDropdownMenu">
+                        <a href="nuestros-pastores.html" style="padding-left: 32px; font-size: 14px;">Nuestros Pastores</a>
+                        <a href="mision-vision.html" style="padding-left: 32px; font-size: 14px;">Misión y Visión</a>
+                        <a href="que-esperar.html" style="padding-left: 32px; font-size: 14px;">Qué Esperar</a>
+                    </div>
+                </div>
                 <a href="#servicios">Servicios</a>
                 <a href="#en-vivo">En Vivo</a>
-                <a href="#pastores">Pastores</a>
                 <a href="#eventos">Eventos</a>
                 <a href="#comunidad">Comunidad</a>
                 <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 8px 0;"></div>
-                <a href="https://www.facebook.com/TheStreamChurchNJ/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="text-align: center;">Conectar</a>
+                <a href="ofrendas.html" class="btn-primary" style="text-align: center;">Ofrendas</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="inicio">
+    <section class="hero has-parallax" id="inicio">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         
@@ -1907,8 +2056,13 @@
     </section>
 
     <!-- Anuncios Section -->
-    <section class="section-padding bg-gradient-slate" id="anuncios">
-        <div class="container">
+    <section class="section-padding" id="anuncios" style="position: relative;">
+        <!-- Dark Fade Overlay -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.9)); pointer-events: none; z-index: 1;"></div>
+        <!-- Particles -->
+        <div class="hero-particles section-particles" style="z-index: 2;"></div>
+        
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="section-header scroll-reveal">
                 <div class="glass-card section-badge">
                     <i data-lucide="megaphone" style="width: 20px; height: 20px; color: #fbbf24;"></i>
@@ -1938,12 +2092,18 @@
     </section>
 
     <!-- Servicios Section -->
-    <section class="section-padding" id="servicios" style="position: relative;">
-        <!-- Background Elements -->
-        <div style="position: absolute; top: 25%; left: -128px; width: 256px; height: 256px; background: rgba(59, 130, 246, 0.1); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
-        <div style="position: absolute; bottom: 25%; right: -128px; width: 256px; height: 256px; background: rgba(245, 158, 11, 0.1); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
+    <section class="section-padding overflow-hidden has-parallax" id="servicios" style="position: relative;">
+        <!-- Parallax Background -->
+        <div class="parallax-bg" id="serviciosBg" style="background-image: url('img/fondo2.jpg'); z-index: 0;"></div>
+        <!-- Overlay - same transform as bg so they stay in sync -->
+        <div class="parallax-overlay" id="serviciosOverlay" style="background: linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.85)); pointer-events: none; z-index: 1;"></div>
+        <!-- Particles -->
+        <div class="hero-particles" id="servicios-particles" style="z-index: 2;"></div>
+        <!-- Decorative Elements -->
+        <div style="position: absolute; top: 25%; left: -128px; width: 256px; height: 256px; background: rgba(59, 130, 246, 0.1); border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 3;"></div>
+        <div style="position: absolute; bottom: 25%; right: -128px; width: 256px; height: 256px; background: rgba(245, 158, 11, 0.1); border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 3;"></div>
         
-        <div class="container">
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="section-header scroll-reveal">
                 <div class="glass-card section-badge">
                     <i data-lucide="clock" style="width: 20px; height: 20px; color: #60a5fa;"></i>
@@ -2010,8 +2170,13 @@
     </section>
 
     <!-- En Vivo Section -->
-    <section class="section-padding bg-gradient-slate-reverse" id="en-vivo">
-        <div class="container">
+    <section class="section-padding" id="en-vivo" style="position: relative;">
+        <!-- Dark Fade Overlay -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.9)); pointer-events: none; z-index: 1;"></div>
+        <!-- Particles -->
+        <div class="hero-particles section-particles" style="z-index: 2;"></div>
+        
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="section-header scroll-reveal">
                 <div class="glass-card section-badge envivo-badge">
                     <i data-lucide="radio" style="width: 20px; height: 20px;"></i>
@@ -2021,22 +2186,39 @@
                 <p class="section-subtitle">Sigue nuestras transmisiones en vivo desde cualquier lugar</p>
             </div>
             
-            <div class="glass-card-strong p-2 scroll-reveal">
-                <div id="boxcast-widget-fgejutg1ypf8iy0eejtk" style="border-radius: 12px; overflow: hidden; background-color: transparent; color: inherit; min-height: 500px;"></div>
-                <script type="text/javascript" charset="utf-8">(function(d, s, c, o) {var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];var h = (('https:' == document.location.protocol) ? 'https:' : 'http:');js.src = h + '//js.boxcast.com/v3.min.js';js.onload = function() { boxcast.noConflict()('#boxcast-widget-'+c).loadChannel(c, o); };js.charset = 'utf-8';fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'fgejutg1ypf8iy0eejtk', {"showTitle":1,"showDescription":1,"showHighlights":1,"showRelated":true,"defaultVideo":"next","market":"house-of-worship","customPreroll":"https://uploads.boxcast.com/vxtkrwcaq2ealq7tbnfy/2023-06/epsjbxp1qak3qnrxs08i/Bless_loop.mp4","showDocuments":true,"showIndex":true,"showDonations":false,"showChat":true,"layout":"playlist-to-right"}));</script>
+            <div class="glass-card-strong p-2 scroll-reveal boxcast-wrapper">
+                <div id="boxcast-widget-fgejutg1ypf8iy0eejtk"></div><script type="text/javascript" charset="utf-8">(function(d, s, c, o) {var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];var h = (('https:' == document.location.protocol) ? 'https:' : 'http:');js.src = h + '//js.boxcast.com/v3.min.js';js.onload = function() { boxcast.noConflict()('#boxcast-widget-'+c).loadChannel(c, o); };js.charset = 'utf-8';fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'fgejutg1ypf8iy0eejtk', {"showTitle":1,"showDescription":1,"showHighlights":1,"showRelated":true,"defaultVideo":"next","market":"house-of-worship","customPreroll":"https://uploads.boxcast.com/vxtkrwcaq2ealq7tbnfy/2023-06/epsjbxp1qak3qnrxs08i/Bless_loop.mp4","showDocuments":true,"showIndex":true,"showDonations":false,"showChat":true,"layout":"playlist-to-right"}));</script>
             </div>
             
             <div class="envivo-features scroll-reveal">
                 <div class="glass-card envivo-feature">
-                    <p>Transmisión HD</p>
+                    <p style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i data-lucide="tv" style="width: 20px; height: 20px; color: #fbbf24; flex-shrink: 0;"></i>
+                        <span>Transmisión HD</span>
+                    </p>
                     <p>Alta Calidad</p>
                 </div>
-                <div class="glass-card envivo-feature">
-                    <p>Chat en Vivo</p>
-                    <p>Interactúa</p>
+                <div class="glass-card envivo-feature social-links" style="flex-direction: column; gap: 8px;">
+                    <p style="margin-bottom: 4px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i data-lucide="radio" style="width: 20px; height: 20px; color: #fbbf24; flex-shrink: 0;"></i>
+                        <span>También nos puedes ver En Vivo:</span>
+                    </p>
+                    <div style="display: flex; gap: 16px; justify-content: center; align-items: center;">
+                        <a href="https://www.facebook.com/TheStreamChurchNJ" target="_blank" rel="noopener noreferrer" class="social-btn facebook" style="display: flex; align-items: center; gap: 8px; padding: 10px 20px; background: linear-gradient(135deg, #1877f2, #166fe5); border-radius: 50px; color: white; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);">
+                            <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCIFR8v6PMjHfYO1MyUnMaCQ" target="_blank" rel="noopener noreferrer" class="social-btn youtube" style="display: flex; align-items: center; gap: 8px; padding: 10px 20px; background: linear-gradient(135deg, #ff0000, #cc0000); border-radius: 50px; color: white; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);">
+                            <i data-lucide="youtube" style="width: 20px; height: 20px;"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="glass-card envivo-feature">
-                    <p>Archivos</p>
+                    <p style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i data-lucide="archive" style="width: 20px; height: 20px; color: #fbbf24; flex-shrink: 0;"></i>
+                        <span>Archivos</span>
+                    </p>
                     <p>Disponibles 24/7</p>
                 </div>
             </div>
@@ -2045,7 +2227,10 @@
 
     <!-- Pastores Section -->
     <section class="section-padding" id="pastores" style="position: relative;">
-        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, #020617, rgba(15, 23, 42, 0.3), #020617); pointer-events: none;"></div>
+        <!-- Dark Fade Overlay -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.95)); pointer-events: none; z-index: 1;"></div>
+        <!-- Particles -->
+        <div class="hero-particles section-particles" style="z-index: 2;"></div>
         
         <div class="container" style="position: relative; z-index: 10;">
             <div class="section-header scroll-reveal">
@@ -2131,7 +2316,14 @@
     </section>
 
     <!-- Ministerio de Artes Section -->
-    <section class="section-padding bg-gradient-ministry overflow-hidden" id="ministerio-artes">
+    <section class="section-padding overflow-hidden has-parallax" id="ministerio-artes" style="position: relative;">
+        <!-- Parallax Background -->
+        <div class="parallax-bg" id="ministerioBg" style="background-image: url('/img/danza-bg.webp'); z-index: 0;"></div>
+        <!-- Dark Fade Overlay - covers extended parallax area -->
+        <div class="parallax-overlay" id="ministerioOverlay" style="background: linear-gradient(to bottom, rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.88), rgba(2, 6, 23, 0.92)); pointer-events: none; z-index: 1;"></div>
+        <!-- Particles -->
+        <div class="hero-particles section-particles" style="z-index: 2;"></div>
+        
         <div class="container" style="position: relative; z-index: 10;">
             <div class="artes-grid">
                 <div class="scroll-reveal">
@@ -2141,7 +2333,7 @@
                     </div>
                     
                     <h2 class="section-title" style="text-align: left; margin-top: 24px;">
-                        Hacerca de Nuestro <span class="gradient-text">Ministerio de Artes</span>
+                        Inscríbete a Nuestro <span class="gradient-text">Ministerio de Artes</span>
                     </h2>
                     
                     <p style="color: rgba(255,255,255,0.8); font-size: 1.125rem; margin: 24px 0 32px; line-height: 1.6;">
@@ -2174,7 +2366,7 @@
                     </div>
                     <div class="glass-card-strong artes-float">
                         <div class="artes-float-content">
-                            <i data-lucide="sparkles" style="width: 24px; height: 24px;"></i>
+                            <i data-lucide="sparkles" style="width: 24px; height: 24px; color: #fbbf24;"></i>
                             <div>
                                 <p>Adoración</p>
                                 <p>Conexión con Dios</p>
@@ -2187,8 +2379,13 @@
     </section>
 
     <!-- Eventos Section -->
-    <section class="section-padding bg-gradient-slate-reverse" id="eventos">
-        <div class="container">
+    <section class="section-padding" id="eventos" style="position: relative;">
+        <!-- Dark Fade Overlay -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.9)); pointer-events: none; z-index: 1;"></div>
+        <!-- Particles -->
+        <div class="hero-particles section-particles" style="z-index: 2;"></div>
+        
+        <div class="container" style="position: relative; z-index: 10;">
             <div class="section-header scroll-reveal">
                 <div class="glass-card section-badge">
                     <i data-lucide="calendar-days" style="width: 20px; height: 20px; color: #60a5fa;"></i>
@@ -2239,8 +2436,13 @@
     </section>
 
     <!-- Versiculo Section -->
-    <section class="section-padding bg-gradient-amber overflow-hidden" id="versiculo" style="position: relative;">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: rgba(251, 191, 36, 0.05); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
+    <section class="section-padding overflow-hidden" id="versiculo" style="position: relative;">
+        <!-- Background Image -->
+        <div style="position: absolute; inset: 0; background: url('img/stream-bg.jpg') center center / cover no-repeat; z-index: 0;"></div>
+        <!-- Overlay -->
+        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.85)); z-index: 1;"></div>
+        <!-- Decorative Element -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: rgba(251, 191, 36, 0.05); border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 2;"></div>
         
         <div class="container" style="position: relative; z-index: 10;">
             <div class="section-header scroll-reveal">
@@ -2278,7 +2480,14 @@
     </section>
 
     <!-- Comunidad Section -->
-    <section class="section-padding bg-gradient-comunidad overflow-hidden" id="comunidad">
+    <section class="section-padding overflow-hidden has-parallax" id="comunidad" style="position: relative;">
+        <!-- Parallax Background -->
+        <div class="parallax-bg" id="comunidadBg" style="background-image: url('img/back-comm.jpg'); z-index: 0;"></div>
+        <!-- Dark Fade Overlay - covers extended parallax area -->
+        <div class="parallax-overlay" id="comunidadOverlay" style="background: linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.85)); pointer-events: none; z-index: 1;"></div>
+        <!-- Particles -->
+        <div class="hero-particles section-particles" style="z-index: 2;"></div>
+        
         <div class="container" style="position: relative; z-index: 10;">
             <div class="comunidad-grid">
                 <div class="scroll-reveal">
@@ -2386,6 +2595,15 @@
         </div>
     </section>
 
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img id="lightboxImage" src="" alt="">
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer" style="background: linear-gradient(to bottom, #020617, #0f172a);">
         <div class="container">
@@ -2482,9 +2700,10 @@
             lucide.createIcons();
         });
         
-        // Close mobile menu when clicking a link
+        // Close mobile menu when clicking a real nav link (not dropdown toggle)
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                if (link.classList.contains('mobile-dropdown-toggle')) return;
                 isMenuOpen = false;
                 mobileMenu.classList.remove('active');
                 menuIcon.setAttribute('data-lucide', 'menu');
@@ -2502,7 +2721,7 @@
             }
         });
         
-        // Create particles
+        // Create particles for hero
         const particlesContainer = document.getElementById('particles');
         for (let i = 0; i < 20; i++) {
             const particle = document.createElement('div');
@@ -2512,6 +2731,48 @@
             particle.style.animationDelay = Math.random() * 3 + 's';
             particle.style.animationDuration = (3 + Math.random() * 2) + 's';
             particlesContainer.appendChild(particle);
+        }
+        
+        // Create particles for servicios section
+        const serviciosParticlesContainer = document.getElementById('servicios-particles');
+        if (serviciosParticlesContainer) {
+            for (let i = 0; i < 25; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 3 + 's';
+                particle.style.animationDuration = (3 + Math.random() * 2) + 's';
+                serviciosParticlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Create particles for all sections
+        const sectionParticlesContainers = document.querySelectorAll('.section-particles');
+        sectionParticlesContainers.forEach(container => {
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 3 + 's';
+                particle.style.animationDuration = (3 + Math.random() * 2) + 's';
+                container.appendChild(particle);
+            }
+        });
+        
+        // Create global particles overlay
+        const globalParticlesContainer = document.getElementById('globalParticles');
+        if (globalParticlesContainer) {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 3 + 's';
+                particle.style.animationDuration = (3 + Math.random() * 2) + 's';
+                globalParticlesContainer.appendChild(particle);
+            }
         }
         
         // Scroll reveal observer
@@ -2534,46 +2795,152 @@
             observer.observe(el);
         });
         
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        // Smooth scroll for anchor links (exclude Boxcast widget links)
+        document.addEventListener('click', function(e) {
+            var anchor = e.target.closest('a[href^="#"]');
+            if (!anchor) return;
+            var href = anchor.getAttribute('href');
+            // Never scroll for empty hash (prevents "scroll to top" when clicking widget links)
+            if (!href || href === '#') {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                return;
+            }
+            // Skip if clicking inside Boxcast widget so widget links work normally
+            if (anchor.closest('#boxcast-widget-fgejutg1ypf8iy0eejtk') || 
+                anchor.closest('[id^="boxcast-widget-"]')) {
+                return;
+            }
+            e.preventDefault();
+            var target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, true);
+        
+        // Lightbox functionality for slideshow images
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const slideshowItems = document.querySelectorAll('.slideshow-item');
+        
+        slideshowItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                if (img) {
+                    lightboxImage.src = img.src;
+                    lightboxCaption.textContent = img.alt || '';
+                    lightboxModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
                 }
             });
         });
         
-        // Load Boxcast script
-        (function(d, s, c, o) {
-            var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-            var h = (('https:' == document.location.protocol) ? 'https:' : 'http:');
-            js.src = h + '//js.boxcast.com/v3.min.js';
-            js.onload = function() {
-                if (typeof boxcast !== 'undefined') {
-                    boxcast.noConflict()('#boxcast-widget-' + c).loadChannel(c, o);
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Close lightbox when clicking outside the image
+        lightboxModal.addEventListener('click', function(e) {
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+        
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    </script>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="ofrendas.html">
+            <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+            Donar Ahora
+        </a>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(event) {
+            event.preventDefault();
+            const dropdownMenu = document.getElementById('mobileDropdownMenu');
+            dropdownMenu.classList.toggle('active');
+            const icon = event.currentTarget.querySelector('i');
+            if (dropdownMenu.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // Parallax: mismo transform en bg y overlay en cada sección para evitar desalineación y scrollbars
+        const PARALLAX_CLAMP = 80;
+        function clampOffset(val) { return Math.max(-PARALLAX_CLAMP, Math.min(PARALLAX_CLAMP, val)); }
+        
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            
+            // Hero: bg + overlay con el mismo transform
+            const heroBg = document.querySelector('.hero-bg');
+            const heroOverlay = document.querySelector('.hero-overlay');
+            if (heroBg && heroOverlay) {
+                const offset = clampOffset(scrolled * 0.3);
+                const t = 'translateY(' + offset + 'px)';
+                heroBg.style.transform = t;
+                heroOverlay.style.transform = t;
+            }
+            
+            // Servicios: bg + overlay sincronizados
+            const serviciosBg = document.getElementById('serviciosBg');
+            const serviciosOverlay = document.getElementById('serviciosOverlay');
+            if (serviciosBg && serviciosOverlay) {
+                const serviciosSection = document.getElementById('servicios');
+                if (serviciosSection) {
+                    const rawOffset = (scrolled - serviciosSection.offsetTop) * 0.2;
+                    const offset = clampOffset(rawOffset);
+                    const t = 'translateY(' + offset + 'px)';
+                    serviciosBg.style.transform = t;
+                    serviciosOverlay.style.transform = t;
                 }
-            };
-            js.charset = 'utf-8';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'fgejutg1ypf8iy0eejtk', {
-            "showTitle": 1,
-            "showDescription": 1,
-            "showHighlights": 1,
-            "showRelated": true,
-            "defaultVideo": "next",
-            "market": "house-of-worship",
-            "customPreroll": "https://uploads.boxcast.com/vxtkrwcaq2ealq7tbnfy/2023-06/epsjbxp1qak3qnrxs08i/Bless_loop.mp4",
-            "showDocuments": true,
-            "showIndex": true,
-            "showDonations": false,
-            "showChat": true,
-            "layout": "playlist-to-right"
-        }));
+            }
+            
+            // Ministerio: bg + overlay sincronizados
+            const ministerioBg = document.getElementById('ministerioBg');
+            const ministerioOverlay = document.getElementById('ministerioOverlay');
+            if (ministerioBg && ministerioOverlay) {
+                const ministerioSection = document.getElementById('ministerio-artes');
+                if (ministerioSection) {
+                    const rawOffset = (scrolled - ministerioSection.offsetTop) * 0.15;
+                    const offset = clampOffset(rawOffset);
+                    const t = 'translateY(' + offset + 'px)';
+                    ministerioBg.style.transform = t;
+                    ministerioOverlay.style.transform = t;
+                }
+            }
+            
+            // Comunidad: bg + overlay sincronizados
+            const comunidadBg = document.getElementById('comunidadBg');
+            const comunidadOverlay = document.getElementById('comunidadOverlay');
+            if (comunidadBg && comunidadOverlay) {
+                const comunidadSection = document.getElementById('comunidad');
+                if (comunidadSection) {
+                    const rawOffset = (scrolled - comunidadSection.offsetTop) * 0.25;
+                    const offset = clampOffset(rawOffset);
+                    const t = 'translateY(' + offset + 'px)';
+                    comunidadBg.style.transform = t;
+                    comunidadOverlay.style.transform = t;
+                }
+            }
+        });
     </script>
 </body>
 </html>
