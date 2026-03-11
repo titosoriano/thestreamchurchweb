@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M3PCZ3V8');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>404 - Página No Encontrada | Mission Baptist Church</title>
+    <meta name="description"
+        content="La página que estás buscando no se pudo encontrar. Volver a la página principal de Mission Baptist Church The Stream.">
+    <meta name="robots" content="noindex, follow">
+
+    <meta name="theme-color" content="#020617">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.avif" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #020617;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+            min-width: 320px;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 16px;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg,
+                    #93c5fd 0%,
+                    #c084fc 25%,
+                    #fbbf24 50%,
+                    #60a5fa 75%,
+                    #93c5fd 100%);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 5s linear infinite;
+        }
+
+        /* ── Premium Hero Title Gradient ── */
+        @keyframes hero-title-shimmer {
+            0% {
+                background-position: 0% center;
+            }
+
+            100% {
+                background-position: 300% center;
+            }
+        }
+
+        .hero-h1-gradient {
+            background: linear-gradient(110deg,
+                    #ffffff 0%,
+                    #e0f2fe 15%,
+                    #bfdbfe 28%,
+                    #ffffff 40%,
+                    #fde68a 55%,
+                    #ffffff 68%,
+                    #c7d2fe 82%,
+                    #ffffff 100%);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: hero-title-shimmer 6s linear infinite;
+            display: inline;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            font-weight: 500;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes orb-float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.5;
+            }
+
+            33% {
+                transform: translateY(-20px) scale(1.08);
+                opacity: 0.8;
+            }
+
+            66% {
+                transform: translateY(-9px) scale(0.95);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 0.5;
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+
+        .delay-500 {
+            animation-delay: 500ms;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding-top: 80px;
+            /* Space for navbar */
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.7) 0%, rgba(2, 6, 23, 0.95) 100%);
+            z-index: 1;
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: orb-float linear infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge span {
+            color: #93c5fd;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: clamp(6rem, 15vw, 12rem);
+            font-weight: 800;
+            margin-bottom: 0px;
+            font-family: 'Cormorant Garamond', 'Raleway', serif;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .hero h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 24px;
+            font-family: 'Cormorant Garamond', 'Raleway', serif;
+            letter-spacing: 2px;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 40px;
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.75) 0%, rgba(253, 230, 138, 0.9) 50%, rgba(255, 255, 255, 0.75) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: hero-title-shimmer 8s linear infinite;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3PCZ3V8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div id="nav-placeholder"></div>
+
+    <section class="hero">
+        <video class="hero-bg" autoplay loop muted playsinline>
+            <source src="videos/danza1.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" id="particles"></div>
+
+        <div class="hero-content">
+            <div class="animate-fade-in-up">
+                <div class="glass-card hero-badge">
+                    <i data-lucide="alert-circle" style="width: 16px; height: 16px; color: #fbbf24;"></i>
+                    <span>Página No Encontrada</span>
+                </div>
+            </div>
+
+            <h1 class="animate-fade-in-up delay-200"><span class="hero-h1-gradient">404</span></h1>
+
+            <h2 class="animate-fade-in-up delay-300 gradient-text">Oh no...</h2>
+
+            <p class="hero-tagline animate-fade-in-up delay-400">
+                Lo sentimos, el lugar que buscas ha cambiado de rumbo o no existe.
+            </p>
+
+            <div class="hero-buttons animate-fade-in-up delay-500">
+                <a href="index.html" class="btn-primary">
+                    <i data-lucide="home" style="width: 20px; height: 20px;"></i>
+                    Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        lucide.createIcons();
+
+        // Hero floating particles (from obras-y-misiones)
+        const container = document.getElementById('particles');
+        if (container) {
+            const configs = [
+                { sz: 10, color: 'rgba(59,130,246,0.55)', l: '12%', t: '22%', dur: '7s', del: '0s' },
+                { sz: 6, color: 'rgba(251,191,36,0.50)', l: '75%', t: '15%', dur: '9s', del: '-2s' },
+                { sz: 14, color: 'rgba(168,85,247,0.40)', l: '55%', t: '65%', dur: '8s', del: '-3.5s' },
+                { sz: 7, color: 'rgba(59,130,246,0.40)', l: '88%', t: '48%', dur: '10s', del: '-1s' },
+                { sz: 5, color: 'rgba(251,191,36,0.60)', l: '28%', t: '75%', dur: '6s', del: '-4s' },
+                { sz: 18, color: 'rgba(168,85,247,0.22)', l: '4%', t: '55%', dur: '12s', del: '-5.5s' },
+                { sz: 8, color: 'rgba(16,185,129,0.40)', l: '62%', t: '30%', dur: '8.5s', del: '-2.5s' },
+                { sz: 5, color: 'rgba(59,130,246,0.35)', l: '40%', t: '8%', dur: '11s', del: '-6s' },
+                { sz: 9, color: 'rgba(251,191,36,0.35)', l: '93%', t: '78%', dur: '7.5s', del: '-1.5s' },
+                { sz: 6, color: 'rgba(239,68,68,0.30)', l: '20%', t: '90%', dur: '9.5s', del: '-3s' },
+            ];
+            configs.forEach(c => {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.cssText = `width:${c.sz}px;height:${c.sz}px;background:${c.color};left:${c.l};top:${c.t};animation-duration:${c.dur};animation-delay:${c.del};box-shadow:0 0 ${c.sz * 3}px ${c.color};`;
+                container.appendChild(p);
+            });
+        }
+    </script>
+    <script src="components.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+<!-- HTML Files -->
+<url>
+  <loc>https://thestreamchurch.org/catecismo-menor-bautista</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/confecion-de-fe-de-los-bautistas</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/confirmacion</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/fundacion-gracia</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/index</loc>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/mision-vision</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/nuestros-pastores</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/obras-y-misiones</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/ofrendas</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/que-esperar</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/tributo-santos-sandoval</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Image Files -->
+<url>
+  <loc>https://thestreamchurch.org/img/ayuda.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/ayuda.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/bautismo-bg.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/bautismo-bg.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/danza.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/danza.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/donate1.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/donate1.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/ericksandoval.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/ericksandoval.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/grupo-grace.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/grupo-grace.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/hero-bg.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/hero-bg.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/icons/amazon.webp</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/icons/amazon.webp</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/icons/bed-bath.webp</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/icons/bed-bath.webp</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/icons/panera.webp</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/icons/panera.webp</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/icons/wawa.webp</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/icons/wawa.webp</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/1.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/1.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/2.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/2.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/3.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/3.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/4.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/4.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/5.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/5.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/6.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/6.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/7.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/7.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/8.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/8.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/9.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/9.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/2/10.jpg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/2/10.jpg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224522.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224522.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224530.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224530.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224533.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224533.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224543.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224543.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224559.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224559.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224610.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224610.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224616.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224616.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224713.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224713.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224717.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224717.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_224721.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_224721.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_225149.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_225149.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_225215.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_225215.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_225724.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_225724.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_230149.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_230149.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_230208.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_230208.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_230213.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_230213.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_230216.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_230216.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/gracia/20260215_230616.avif</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/gracia/20260215_230616.avif</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/favicon/favicon.ico</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/favicon/favicon.ico</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/favicon/favicon.svg</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/favicon/favicon.svg</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/favicon/favicon-96x96.png</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/favicon/favicon-96x96.png</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/favicon/apple-touch-icon.png</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/favicon/apple-touch-icon.png</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/favicon/site.webmanifest</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/favicon/site.webmanifest</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/favicon/web-app-manifest-192x192.png</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/favicon/web-app-manifest-192x192.png</image:loc>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/img/favicon/web-app-manifest-512x512.png</loc>
+  <image:image>
+    <image:loc>https://thestreamchurch.org/img/favicon/web-app-manifest-512x512.png</image:loc>
+  </image:image>
+</url>
+
+<!-- Video Files -->
+<url>
+  <loc>https://thestreamchurch.org/videos/aguilares.mp4</loc>
+  <video:video>
+    <video:content_loc>https://thestreamchurch.org/videos/aguilares.mp4</video:content_loc>
+    <video:player_loc allow_embed="yes">https://thestreamchurch.org/videos/aguilares.mp4</video:player_loc>
+    <video:thumbnail_loc>https://thestreamchurch.org/img/chalatenango-01.jpg</video:thumbnail_loc>
+    <video:title>Aguilares</video:title>
+  </video:video>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/videos/danza1.mp4</loc>
+  <video:video>
+    <video:content_loc>https://thestreamchurch.org/videos/danza1.mp4</video:content_loc>
+    <video:player_loc allow_embed="yes">https://thestreamchurch.org/videos/danza1.mp4</video:player_loc>
+    <video:thumbnail_loc>https://thestreamchurch.org/img/danza.avif</video:thumbnail_loc>
+    <video:title>Danza 1</video:title>
+  </video:video>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/videos/danza2.mp4</loc>
+  <video:video>
+    <video:content_loc>https://thestreamchurch.org/videos/danza2.mp4</video:content_loc>
+    <video:player_loc allow_embed="yes">https://thestreamchurch.org/videos/danza2.mp4</video:player_loc>
+    <video:thumbnail_loc>https://thestreamchurch.org/img/danza.avif</video:thumbnail_loc>
+    <video:title>Danza 2</video:title>
+  </video:video>
+</url>
+
+<url>
+  <loc>https://thestreamchurch.org/videos/pastores.mp4</loc>
+  <video:video>
+    <video:content_loc>https://thestreamchurch.org/videos/pastores.mp4</video:content_loc>
+    <video:player_loc allow_embed="yes">https://thestreamchurch.org/videos/pastores.mp4</video:player_loc>
+    <video:thumbnail_loc>https://thestreamchurch.org/img/ericksandoval.avif</video:thumbnail_loc>
+    <video:title>Pastores</video:title>
+  </video:video>
+</url>
+
+</urlset>

@@ -1,0 +1,14 @@
+AuthGroupFile /dev/null
+AuthUserFile /home/thestrea/domains/thestreamchurch.org/.htpasswd/public_html/.htpasswd
+ErrorDocument 401 "Unauthorized Access"
+# Activar el motor de reescritura
+RewriteEngine On
+
+# 1. Redirigir de /contacto.html a /contacto (para que no haya contenido duplicado)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# 2. Servir el archivo .html internamente cuando se accede a /contacto
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
